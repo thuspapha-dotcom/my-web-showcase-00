@@ -24,7 +24,7 @@ function NotFoundComponent() {
         <div className="mt-6">
           <Link
             to="/"
-            className="inline-flex items-center justify-center rounded-md bg-primary px-4 py-2 text-sm font-medium text-primary-foreground transition-colors hover:bg-primary/90"
+            className="inline-flex items-center justify-center rounded-full bg-primary px-6 py-2.5 text-sm font-medium text-primary-foreground transition-colors hover:bg-primary/90"
           >
             Go home
           </Link>
@@ -56,13 +56,13 @@ function ErrorComponent({ error, reset }: { error: Error; reset: () => void }) {
               router.invalidate();
               reset();
             }}
-            className="inline-flex items-center justify-center rounded-md bg-primary px-4 py-2 text-sm font-medium text-primary-foreground transition-colors hover:bg-primary/90"
+            className="inline-flex items-center justify-center rounded-full bg-primary px-6 py-2.5 text-sm font-medium text-primary-foreground transition-colors hover:bg-primary/90"
           >
             Try again
           </button>
           <a
             href="/"
-            className="inline-flex items-center justify-center rounded-md border border-input bg-background px-4 py-2 text-sm font-medium text-foreground transition-colors hover:bg-accent"
+            className="inline-flex items-center justify-center rounded-full border border-input bg-background px-6 py-2.5 text-sm font-medium text-foreground transition-colors hover:bg-accent"
           >
             Go home
           </a>
@@ -77,14 +77,14 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Lovable App" },
-      { name: "description", content: "Lovable Generated Project" },
-      { name: "author", content: "Lovable" },
-      { property: "og:title", content: "Lovable App" },
-      { property: "og:description", content: "Lovable Generated Project" },
+      { title: "Arun Ratchada — Multidisciplinary Designer" },
+      { name: "description", content: "Portfolio of Arun Ratchada, a multidisciplinary designer based in Bangkok focusing on brand identity, digital experiences, and physical artifacts." },
+      { name: "author", content: "Arun Ratchada" },
+      { property: "og:title", content: "Arun Ratchada — Multidisciplinary Designer" },
+      { property: "og:description", content: "Portfolio of Arun Ratchada, a multidisciplinary designer based in Bangkok." },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
-      { name: "twitter:site", content: "@Lovable" },
+      { name: "twitter:site", content: "@arunratchada" },
     ],
     links: [
       {
@@ -92,6 +92,19 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
         href: appCss,
       },
       { rel: "icon", href: "/favicon.ico", type: "image/x-icon" },
+      {
+        rel: "preconnect",
+        href: "https://fonts.googleapis.com",
+      },
+      {
+        rel: "preconnect",
+        href: "https://fonts.gstatic.com",
+        crossOrigin: "anonymous",
+      },
+      {
+        rel: "stylesheet",
+        href: "https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@400;500;600&display=swap",
+      },
     ],
   }),
   shellComponent: RootShell,
@@ -114,13 +127,91 @@ function RootShell({ children }: { children: ReactNode }) {
   );
 }
 
+function Header() {
+  return (
+    <nav className="sticky top-0 z-50 w-full border-b border-border/50 bg-background/80 backdrop-blur-md">
+      <div className="mx-auto flex h-16 max-w-7xl items-center justify-between px-6 lg:px-12">
+        <Link to="/" className="font-serif text-lg font-medium tracking-tight">
+          Arun Ratchada
+        </Link>
+        <div className="flex items-center gap-8">
+          <Link
+            to="/work"
+            activeProps={{ className: "text-foreground" }}
+            className="text-sm text-muted-foreground transition-colors hover:text-foreground"
+          >
+            Work
+          </Link>
+          <Link
+            to="/about"
+            activeProps={{ className: "text-foreground" }}
+            className="text-sm text-muted-foreground transition-colors hover:text-foreground"
+          >
+            About
+          </Link>
+          <Link
+            to="/contact"
+            activeProps={{ className: "text-foreground" }}
+            className="text-sm text-muted-foreground transition-colors hover:text-foreground"
+          >
+            Contact
+          </Link>
+        </div>
+      </div>
+    </nav>
+  );
+}
+
+function Footer() {
+  return (
+    <footer className="mx-auto max-w-7xl px-6 py-12 lg:px-12">
+      <div className="flex flex-col items-center justify-between gap-6 md:flex-row">
+        <p className="text-xs text-muted-foreground">
+          &copy; {new Date().getFullYear()} Arun Ratchada. All rights reserved.
+        </p>
+        <div className="flex gap-6">
+          <a
+            href="https://instagram.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-xs font-medium uppercase tracking-widest text-muted-foreground transition-colors hover:text-foreground"
+          >
+            Instagram
+          </a>
+          <a
+            href="https://linkedin.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-xs font-medium uppercase tracking-widest text-muted-foreground transition-colors hover:text-foreground"
+          >
+            LinkedIn
+          </a>
+          <a
+            href="https://read.cv"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-xs font-medium uppercase tracking-widest text-muted-foreground transition-colors hover:text-foreground"
+          >
+            Read.cv
+          </a>
+        </div>
+      </div>
+    </footer>
+  );
+}
+
 function RootComponent() {
   const { queryClient } = Route.useRouteContext();
 
   return (
     <QueryClientProvider client={queryClient}>
-      {/* Required: nested routes render here. Removing <Outlet /> breaks all child routes. */}
-      <Outlet />
+      <div className="flex min-h-screen flex-col bg-background font-sans text-foreground">
+        <Header />
+        <main className="flex-1">
+          <Outlet />
+        </main>
+        <Footer />
+      </div>
     </QueryClientProvider>
   );
 }
