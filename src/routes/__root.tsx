@@ -165,7 +165,7 @@ function Header() {
 function Footer() {
   return (
     <footer className="mx-auto max-w-7xl px-6 py-12 lg:px-12">
-      <div className="flex flex-col items-center justify-between gap-6 md:flex-row md:gap-0">
+      <div className="flex flex-col items-center justify-between gap-6 md:flex-row">
         <p className="text-xs text-muted-foreground">
           &copy; {new Date().getFullYear()} Arun Ratchada. All rights reserved.
         </p>
