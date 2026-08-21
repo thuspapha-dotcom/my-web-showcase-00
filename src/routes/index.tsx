@@ -283,10 +283,10 @@ function HomePage() {
               ดูผลงาน
             </a>
             <a
-              href="#contact"
+              href="mailto:thuspapha@gmail.com?subject=Resume%20request"
               className="rounded-full border-2 border-ink/15 bg-card px-7 py-3 text-sm font-semibold text-ink transition-transform hover:-translate-y-0.5"
             >
-              ติดต่อฉัน
+              Resume
             </a>
           </div>
         </div>
