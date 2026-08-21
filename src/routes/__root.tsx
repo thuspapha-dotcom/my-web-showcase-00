@@ -81,7 +81,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { name: "description", content: "Portfolio of Thuspapha M., a multidisciplinary designer based in Bangkok focusing on brand identity, digital experiences, and physical artifacts." },
       { name: "author", content: "Thuspapha M." },
       { property: "og:title", content: "Thuspapha M. — Multidisciplinary Designer" },
-      { property: "og:description", content: "Portfolio of Arun Ratchada, a multidisciplinary designer based in Bangkok." },
+      { property: "og:description", content: "Portfolio of Thuspapha M., a multidisciplinary designer based in Bangkok." },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
       { name: "twitter:site", content: "@thuspapham" },
