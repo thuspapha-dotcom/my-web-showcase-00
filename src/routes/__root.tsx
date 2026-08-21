@@ -77,7 +77,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Arun Ratchada — Multidisciplinary Designer" },
+      { title: "Thuspapha M. — Multidisciplinary Designer" },
       { name: "description", content: "Portfolio of Arun Ratchada, a multidisciplinary designer based in Bangkok focusing on brand identity, digital experiences, and physical artifacts." },
       { name: "author", content: "Arun Ratchada" },
       { property: "og:title", content: "Arun Ratchada — Multidisciplinary Designer" },
