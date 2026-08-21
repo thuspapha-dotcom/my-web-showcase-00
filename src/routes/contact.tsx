@@ -3,10 +3,10 @@ import { createFileRoute } from "@tanstack/react-router";
 export const Route = createFileRoute("/contact")({
   head: () => ({
     meta: [
-      { title: "Contact — Arun Ratchada" },
-      { name: "description", content: "Get in touch with Arun Ratchada for new projects and collaborations." },
-      { property: "og:title", content: "Contact — Arun Ratchada" },
-      { property: "og:description", content: "Get in touch with Arun Ratchada for new projects and collaborations." },
+      { title: "Contact — Thuspapha M." },
+      { name: "description", content: "Get in touch with Thuspapha M. for new projects and collaborations." },
+      { property: "og:title", content: "Contact — Thuspapha M." },
+      { property: "og:description", content: "Get in touch with Thuspapha M. for new projects and collaborations." },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
     ],
@@ -23,10 +23,10 @@ function ContactPage() {
           Currently accepting new projects for Q3 2024.
         </p>
         <a
-          href="mailto:hello@ratchada.studio"
+          href="mailto:hello@thuspapha.studio"
           className="mt-8 inline-block text-xl font-medium tracking-tight underline underline-offset-8 transition-opacity hover:opacity-70"
         >
-          hello@ratchada.studio
+          hello@thuspapha.studio
         </a>
       </div>
     </section>

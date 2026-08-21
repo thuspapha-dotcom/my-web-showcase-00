@@ -4,10 +4,10 @@ import portraitImage from "../assets/portrait.jpg";
 export const Route = createFileRoute("/about")({
   head: () => ({
     meta: [
-      { title: "About — Arun Ratchada" },
-      { name: "description", content: "Learn about Arun Ratchada's design philosophy, services, and select clients." },
-      { property: "og:title", content: "About — Arun Ratchada" },
-      { property: "og:description", content: "Learn about Arun Ratchada's design philosophy and services." },
+      { title: "About — Thuspapha M." },
+      { name: "description", content: "Learn about Thuspapha M.'s design philosophy, services, and select clients." },
+      { property: "og:title", content: "About — Thuspapha M." },
+      { property: "og:description", content: "Learn about Thuspapha M.'s design philosophy and services." },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
     ],
@@ -22,7 +22,7 @@ function AboutPage() {
         <div className="lg:col-span-5">
           <img
             src={portraitImage}
-            alt="Arun Ratchada in studio"
+            alt="Thuspapha M. in studio"
             width={1008}
             height={1200}
             loading="lazy"
