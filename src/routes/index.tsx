@@ -213,7 +213,7 @@ function HomePage() {
             <span className="grid h-9 w-9 place-items-center rounded-2xl bg-pink font-display text-lg font-extrabold text-card">
               T
             </span>
-            <span className="font-display text-base font-bold tracking-tight">Thuspapha</span>
+            <span className="font-display text-base font-bold tracking-tight">Thuspapha M.</span>
           </a>
           <div className="flex items-center gap-1 sm:gap-5">
             <a href="#work" className="hidden rounded-full px-3 py-2 text-sm font-medium text-ink/70 transition-colors hover:text-pink sm:block">
