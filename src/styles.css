@@ -60,11 +60,15 @@
   --color-sidebar-border: var(--sidebar-border);
   --color-sidebar-ring: var(--sidebar-ring);
 
-  /* Editorial Archive custom tokens */
+  /* Portfolio custom tokens */
   --color-canvas: var(--canvas);
+  --color-canvas-alt: var(--canvas-alt);
   --color-ink: var(--ink);
-  --color-brand-moss: var(--brand-moss);
-  --color-brand-sand: var(--brand-sand);
+  --color-pink: var(--pink);
+  --color-pink-deep: var(--pink-deep);
+  --color-sun: var(--sun);
+  --font-display: var(--font-display);
+
 
   --font-sans: var(--font-sans);
   --font-serif: var(--font-serif);
