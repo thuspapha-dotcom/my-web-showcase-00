@@ -77,14 +77,14 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Arun Ratchada — Multidisciplinary Designer" },
-      { name: "description", content: "Portfolio of Arun Ratchada, a multidisciplinary designer based in Bangkok focusing on brand identity, digital experiences, and physical artifacts." },
-      { name: "author", content: "Arun Ratchada" },
-      { property: "og:title", content: "Arun Ratchada — Multidisciplinary Designer" },
-      { property: "og:description", content: "Portfolio of Arun Ratchada, a multidisciplinary designer based in Bangkok." },
+      { title: "Thuspapha M. — Multidisciplinary Designer" },
+      { name: "description", content: "Portfolio of Thuspapha M., a multidisciplinary designer based in Bangkok focusing on brand identity, digital experiences, and physical artifacts." },
+      { name: "author", content: "Thuspapha M." },
+      { property: "og:title", content: "Thuspapha M. — Multidisciplinary Designer" },
+      { property: "og:description", content: "Portfolio of Thuspapha M., a multidisciplinary designer based in Bangkok." },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
-      { name: "twitter:site", content: "@arunratchada" },
+      { name: "twitter:site", content: "@thuspapham" },
     ],
     links: [
       {
@@ -132,7 +132,7 @@ function Header() {
     <nav className="sticky top-0 z-50 w-full border-b border-border/50 bg-background/80 backdrop-blur-md">
       <div className="mx-auto flex h-16 max-w-7xl items-center justify-between px-6 lg:px-12">
         <Link to="/" className="font-serif text-lg font-medium tracking-tight">
-          Arun Ratchada
+          Thuspapha M.
         </Link>
         <div className="flex items-center gap-8">
           <Link
@@ -167,7 +167,7 @@ function Footer() {
     <footer className="mx-auto max-w-7xl px-6 py-12 lg:px-12">
       <div className="flex flex-col items-center justify-between gap-6 md:flex-row">
         <p className="text-xs text-muted-foreground">
-          &copy; {new Date().getFullYear()} Arun Ratchada. All rights reserved.
+          &copy; {new Date().getFullYear()} Thuspapha M. All rights reserved.
         </p>
         <div className="flex gap-6">
           <a

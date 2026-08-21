@@ -3,10 +3,10 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Arun Ratchada — Multidisciplinary Designer" },
-      { name: "description", content: "Portfolio of Arun Ratchada, a multidisciplinary designer based in Bangkok focusing on brand identity, digital experiences, and physical artifacts." },
-      { property: "og:title", content: "Arun Ratchada — Multidisciplinary Designer" },
-      { property: "og:description", content: "Portfolio of Arun Ratchada, a multidisciplinary designer based in Bangkok." },
+      { title: "Thuspapha M. — Multidisciplinary Designer" },
+      { name: "description", content: "Portfolio of Thuspapha M., a multidisciplinary designer based in Bangkok focusing on brand identity, digital experiences, and physical artifacts." },
+      { property: "og:title", content: "Thuspapha M. — Multidisciplinary Designer" },
+      { property: "og:description", content: "Portfolio of Thuspapha M., a multidisciplinary designer based in Bangkok." },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
     ],

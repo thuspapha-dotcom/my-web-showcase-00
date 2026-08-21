@@ -7,10 +7,10 @@ import symmetryImage from "../assets/project-symmetry.jpg";
 export const Route = createFileRoute("/work")({
   head: () => ({
     meta: [
-      { title: "Selected Works — Arun Ratchada" },
-      { name: "description", content: "Selected design works by Arun Ratchada, including brand identity, packaging, digital interfaces, and editorial design." },
-      { property: "og:title", content: "Selected Works — Arun Ratchada" },
-      { property: "og:description", content: "Selected design works by Arun Ratchada." },
+      { title: "Selected Works — Thuspapha M." },
+      { name: "description", content: "Selected design works by Thuspapha M., including brand identity, packaging, digital interfaces, and editorial design." },
+      { property: "og:title", content: "Selected Works — Thuspapha M." },
+      { property: "og:description", content: "Selected design works by Thuspapha M." },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
     ],
