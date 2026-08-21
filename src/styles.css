@@ -77,11 +77,16 @@
 :root {
   --radius: 0.75rem;
 
-  /* Editorial Archive light palette */
-  --canvas: oklch(0.988 0.003 106.448);
-  --ink: oklch(0.217 0.004 106.715);
-  --brand-moss: oklch(0.364 0.018 154.904);
-  --brand-sand: oklch(0.911 0.010 81.795);
+  /* Warm cream + hot pink palette */
+  --canvas: oklch(0.938 0.014 92);
+  --canvas-alt: oklch(0.898 0.023 91);
+  --ink: oklch(0.237 0.031 45);
+  --pink: oklch(0.646 0.163 356);
+  --pink-deep: oklch(0.52 0.16 1);
+  --sun: oklch(0.859 0.148 89);
+  --brand-moss: var(--pink);
+  --brand-sand: var(--canvas-alt);
+
 
   --background: var(--canvas);
   --foreground: var(--ink);
