@@ -17,13 +17,13 @@ function NotFoundComponent() {
     <div className="flex min-h-screen items-center justify-center bg-background px-4">
       <div className="max-w-md text-center">
         <h1 className="font-display text-7xl font-extrabold text-foreground">404</h1>
-        <h2 className="mt-4 text-xl font-semibold text-foreground">ไม่พบหน้านี้</h2>
+        <h2 className="mt-4 text-xl font-semibold text-foreground">Page not found</h2>
         <div className="mt-6">
           <Link
             to="/"
             className="inline-flex items-center justify-center rounded-full bg-pink px-6 py-2.5 text-sm font-semibold text-card transition-colors hover:bg-pink-deep"
           >
-            กลับหน้าแรก
+            Back to home
           </Link>
         </div>
       </div>
