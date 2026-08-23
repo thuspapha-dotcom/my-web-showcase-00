@@ -566,7 +566,7 @@ function HomePage() {
                       </div>
                       <div>
                         <p className="font-bold uppercase tracking-wider text-ink/60">Focus</p>
-                        <p className="mt-1 font-medium text-ink/75">{CASE_STUDY_META[p.id].focus}</p>
+                        <p className="mt-1 font-medium text-ink/75">{CASE_STUDY_META[p.id]?.focus}</p>
                       </div>
                     </div>
                     <div className="flex flex-wrap gap-1.5">
