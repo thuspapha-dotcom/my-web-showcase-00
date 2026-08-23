@@ -9,11 +9,14 @@ import saijaiStructure from "../assets/saijai-structure.jpg";
 import saijaiLightComparison from "../assets/saijai-light-comparison.png";
 import saijaiSecondLife from "../assets/saijai-second-life.png";
 import saijaiArExperience from "../assets/saijai-ar-experience.png";
+import saijaiBrandingBoard from "../assets/saijai-branding-board.png";
+import saijaiGenZInsight from "../assets/saijai-gen-z-insight.png";
 import pKbtg from "../assets/p-kbtg.jpg";
 import pBrand from "../assets/p-brand.jpg";
 import pInterior from "../assets/p-interior.jpg";
 import pProduct from "../assets/p-product.jpg";
 import portrait from "../assets/portrait-mai.png";
+import signatureLogo from "../assets/mai-signature-transparent.png";
 import figmaLogo from "../assets/figma-logo.png";
 import procreateLogo from "../assets/procreate-logo.png";
 import illustratorLogo from "../assets/software-illustrator.svg";
@@ -36,6 +39,34 @@ import projectCircusSweet from "../assets/project-circus-sweet.jpg";
 import projectNewsphoter from "../assets/project-newsphoter.jpg";
 import projectNami from "../assets/project-nami.jpg";
 import projectLandmark from "../assets/project-landmark.jpg";
+import buddyCover from "../assets/buddy-card-cover.png";
+import buddyDesignDirection from "../assets/buddy-cover.jpg";
+import buddyProblem from "../assets/buddy-problem.jpg";
+import buddyLonelinessImpact from "../assets/buddy-loneliness-impact.jpg";
+import buddyResearchPhases from "../assets/buddy-research-phases.jpg";
+import buddyDifferentiation from "../assets/buddy-differentiation.jpg";
+import buddyTouchpoints from "../assets/buddy-touchpoints.jpg";
+import buddyPersona from "../assets/buddy-persona.jpg";
+import buddyTesting from "../assets/buddy-testing.jpg";
+import buddyUiFlow from "../assets/buddy-ui-flow.jpg";
+import buddyPoints from "../assets/buddy-points.jpg";
+import buddyBondingKit from "../assets/buddy-bonding-kit-page-69.jpg";
+import buddyTargetSegmentation from "../assets/buddy-target-segmentation.jpg";
+import buddyApplication31 from "../assets/buddy-application-31.jpg";
+import buddyApplication32 from "../assets/buddy-application-32.jpg";
+import buddyApplication33 from "../assets/buddy-application-33.jpg";
+import buddyApplication34 from "../assets/buddy-application-34.jpg";
+import buddyBondingKit35 from "../assets/buddy-bonding-kit-35.jpg";
+import buddyBondingKit36 from "../assets/buddy-bonding-kit-36.jpg";
+import buddyMascotCharacter from "../assets/buddy-mascot-character.jpg";
+import buddyGalleryBondingKit from "../assets/buddy-gallery-bonding-kit.png";
+import buddyGalleryBump from "../assets/buddy-gallery-bump.png";
+import buddyGalleryPins from "../assets/buddy-gallery-pins.png";
+import buddyGalleryMeet from "../assets/buddy-gallery-meet.png";
+import buddyGalleryApplicationCheckin from "../assets/buddy-gallery-application-checkin.png";
+import buddyGalleryApplicationJourney from "../assets/buddy-gallery-application-journey.png";
+import buddyClosing from "../assets/buddy-closing.png";
+import buddyCommunityFlow from "../assets/buddy-page-117.jpg";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -80,6 +111,19 @@ const FILTERS = ["All", "UX·UI", "Branding", "Interior·3D", "Product"] as cons
 
 const PROJECTS: Project[] = [
   {
+    id: "buddy-journey",
+    title: "Buddy Journey Senior Project",
+    category: "UX·UI",
+    desc: "An experience platform helping university students who move to a new city build meaningful friendships and navigate loneliness.",
+    detail:
+      "Buddy Journey is an individual senior project designed for university students relocating to a large city. It combines a verified, group-first digital platform with guided social activities, an AI advisor, shared memories, and a physical bonding kit to help new relationships grow naturally across four stages of relocation.",
+    role: "Research | User interview | Journey mapping | Service design | UX/UI design | Visual identity | Prototype testing",
+    tools: ["Figma", "Illustrator", "Canva"],
+    image: buddyCover,
+    timeline: "Senior Project · 2026",
+    team: "Individual project — Department of Industrial Design, Faculty of Architecture, Chulalongkorn University",
+  },
+  {
     id: "saijai",
     title: "Saijai — Sustainable Packaging",
     category: "Branding",
@@ -87,8 +131,8 @@ const PROJECTS: Project[] = [
     desc: "Recycled packaging that transforms into a reusable clothes hanger — protection that becomes a second product, not waste.",
     detail:
       "SAIJAI is an eco-conscious clothing brand concept created by our team to promote sustainability. We designed the packaging not only to protect the clothes but also to enhance the post-purchase experience. By transforming into reusable hangers, the packaging extends its functionality, reduces waste, and reinforces the concept's commitment to sustainability.",
-    role: "Research | Concept design | Branding design | Packaging Design | Prototype test | Marketing | Product present",
-    tools: ["Illustrator", "Photoshop"],
+    role: "Research | SWOT | Concept design | Branding design | Packaging Design | Prototype test | Marketing | Marketing Roadmap | Product present",
+    tools: ["Illustrator", "Photoshop", "Canva"],
     image: pSaijai,
     award: "Honorable Mention",
     awardDetail: "Honorable Mention — SCGP Packaging Speak Out 2024",
@@ -114,7 +158,8 @@ const PROJECTS: Project[] = [
   {
     id: "brand",
     title: "Pop fresh food",
-    category: "Branding",
+    category: "UX·UI",
+    displayCategory: "SERVICE · UX DESIGN",
     desc: "A smart food pickup and vending station at CU POP bus stops for students with busy mornings.",
     detail:
       "Pop Fresh Food gives Chulalongkorn University students quick and convenient access to breakfast from nearby vendors without disrupting their daily commute. The service highlights the importance of a balanced morning meal and encourages healthier, more consistent breakfast habits.",
@@ -226,6 +271,7 @@ const PROJECTS: Project[] = [
 ];
 
 const PROJECT_ORDER = [
+  "buddy-journey",
   "kbtg",
   "saijai",
   "brand",
@@ -241,9 +287,10 @@ const PROJECT_ORDER = [
 ];
 
 const CASE_STUDY_META: Record<string, { label: string; focus: string }> = {
+  "buddy-journey": { label: "", focus: "Service design · UX/UI · Social connection" },
   kbtg: { label: "Featured case study · 02", focus: "Roommate matching · UX/UI · Prototyping" },
   saijai: { label: "", focus: "Branding · Packaging · Sustainability" },
-  brand: { label: "Selected project · 04", focus: "Service design · Branding · Healthy habits" },
+  brand: { label: "Selected project · 04", focus: "Service design · UX design · Healthy habits" },
   interior: { label: "Selected project · 05", focus: "Cultural tourism · Space planning · Rendering" },
   product: { label: "Selected project · 06", focus: "Experience design · UX/UI · Prototyping" },
   "self-love": { label: "Selected project · 07", focus: "Interior design · Memphis style · Rendering" },
@@ -335,6 +382,12 @@ function HomePage() {
     );
   }, [filter]);
 
+  const activeIndex = active ? visible.findIndex((project) => project.id === active.id) : -1;
+  const previousProject = activeIndex > 0 ? visible[activeIndex - 1] : null;
+  const nextProject = activeIndex >= 0 && activeIndex < visible.length - 1
+    ? visible[activeIndex + 1]
+    : null;
+
   useEffect(() => {
     if (!active) return;
     const onKey = (e: KeyboardEvent) => e.key === "Escape" && setActive(null);
@@ -352,8 +405,14 @@ function HomePage() {
       <header className="sticky top-0 z-40 border-b border-card/15 bg-ink text-card">
         <nav className="mx-auto flex h-16 max-w-6xl items-center justify-between px-5 sm:px-8">
           <a href="#top" className="flex items-center gap-2.5">
-            <span className="grid h-9 w-9 place-items-center rounded-full border border-card/55 font-display text-lg font-bold text-card">
-              T
+            <span className="grid h-10 w-10 shrink-0 place-items-center">
+              <img
+                src={signatureLogo}
+                alt="Mai signature mark"
+                width={1254}
+                height={1254}
+                className="h-full w-full object-contain brightness-0 invert"
+              />
             </span>
             <span className="font-display text-base font-bold tracking-tight">Thuspapha M.</span>
           </a>
@@ -808,7 +867,7 @@ function HomePage() {
                       that earns a second life instead of becoming trash?
                     </p>
                   </div>
-                  <div className="mt-5 border-t border-ink/10 pt-5">
+                  <div className="mt-10">
                     <p className="flex items-center gap-2 text-sm font-semibold uppercase tracking-[0.25em] text-pink">
                       <Sparkle className="h-4 w-4 shrink-0" />
                       The Concept
@@ -831,7 +890,7 @@ function HomePage() {
                       loading="lazy"
                       className="mt-5 w-full rounded-[18px] border border-ink/10 object-cover"
                     />
-                    <div className="mt-5 border-t border-ink/10 pt-5">
+                    <div className="mt-10">
                       <p className="flex items-center gap-2 text-sm font-semibold uppercase tracking-[0.25em] text-pink">
                         <Sparkle className="h-4 w-4 shrink-0" />
                         About the Brand
@@ -846,7 +905,41 @@ function HomePage() {
                         clean water to the world.
                       </p>
                     </div>
-                    <div className="mt-5 border-t border-ink/10 pt-5">
+                    <div className="mt-10">
+                      <p className="flex items-center gap-2 text-sm font-semibold uppercase tracking-[0.25em] text-pink">
+                        <Sparkle className="h-4 w-4 shrink-0" />
+                        Who It&apos;s For
+                      </p>
+                      <h4 className="mt-4 font-display text-2xl font-bold text-ink">
+                        Designed for Gen Z
+                      </h4>
+                      <p className="mt-3 leading-relaxed text-ink/70">
+                        A generation that grew up with the climate crisis — and votes with its
+                        wallet. Around <strong className="font-semibold text-ink">2.5 billion</strong>{" "}
+                        people strong, with global spending power projected to reach up to{" "}
+                        <strong className="font-semibold text-ink">$12 trillion</strong>.
+                      </p>
+                      <img
+                        src={saijaiGenZInsight}
+                        alt="Gen Z audience insight: 2.5 billion people, up to 12 trillion dollars in spending power, 73 percent willing to pay more for eco-friendly products, and 10 percent extra for brands helping solve social problems"
+                        width={1736}
+                        height={928}
+                        loading="lazy"
+                        className="mt-5 w-full rounded-[18px] border border-ink/10 object-cover"
+                      />
+                      <p className="mt-4 leading-relaxed text-ink/70">
+                        The insight that shaped the design: this is a generation that rewards brands
+                        making sustainability{" "}
+                        <strong className="font-semibold text-ink">visible and shareable</strong> —
+                        exactly what the glow-in-the-dark unboxing and the scan-to-see-your-impact
+                        system are built to do.
+                      </p>
+                      <p className="mt-3 text-xs leading-relaxed text-ink/55">
+                        <strong className="font-semibold text-ink/65">Sources:</strong> HILL ASEAN
+                        research; Deloitte Gen Z &amp; Millennial Survey (2024).
+                      </p>
+                    </div>
+                    <div className="mt-10">
                       <p className="flex items-center gap-2 text-sm font-semibold uppercase tracking-[0.25em] text-pink">
                         <Sparkle className="h-4 w-4 shrink-0" />
                         Branding
@@ -857,6 +950,55 @@ function HomePage() {
                         isn&apos;t just a purchase; it&apos;s a way to take part in returning clean water
                         to the world.
                       </p>
+                      <div className="mt-5 grid gap-4 sm:grid-cols-2">
+                        <div className="rounded-[18px] border border-ink/15 bg-card p-5">
+                          <p className="text-xs font-semibold uppercase tracking-[0.2em] text-pink">
+                            Archetype
+                          </p>
+                          <h4 className="mt-3 font-display text-xl font-bold text-ink">
+                            The Caregiver
+                          </h4>
+                          <p className="mt-2 text-sm leading-relaxed text-ink/70">
+                            A caregiver to nature and society — protective, sincere, quietly hopeful.
+                          </p>
+                        </div>
+                        <div className="rounded-[18px] border border-ink/15 bg-card p-5">
+                          <p className="text-xs font-semibold uppercase tracking-[0.2em] text-pink">
+                            Brand Values
+                          </p>
+                          <h4 className="mt-3 font-display text-xl font-bold leading-snug text-ink">
+                            Sustainability · Connection · Revelation
+                          </h4>
+                          <p className="mt-2 text-sm leading-relaxed text-ink/70">
+                            Protect the planet, involve the customer, reveal the impact.
+                          </p>
+                        </div>
+                      </div>
+                      <div className="mt-8">
+                        <p className="text-xs font-semibold uppercase tracking-[0.2em] text-pink">
+                          Visual Identity
+                        </p>
+                        <p className="mt-3 leading-relaxed text-ink/70">
+                          The wordmark&apos;s letterforms echo{" "}
+                          <strong className="font-semibold text-ink">falling water droplets</strong>,
+                          and a small droplet mark stands for water given back. The palette moves
+                          between{" "}
+                          <strong className="font-semibold text-ink">
+                            deep ocean blues and natural, undyed beige
+                          </strong>{" "}
+                          — water and earth, the two things the brand works to protect — while a
+                          soft, hopeful type voice matches the quiet tone of the unboxing. Brand and
+                          package speak as one.
+                        </p>
+                      </div>
+                      <img
+                        src={saijaiBrandingBoard}
+                        alt="SAIJAI branding system, logo, typography, colour palette, hang tag, and packaging"
+                        width={2280}
+                        height={1310}
+                        loading="lazy"
+                        className="mt-5 w-full rounded-[18px] border border-ink/10 object-cover"
+                      />
                     </div>
                     <div className="mt-5">
                       <h4 className="text-2xl font-bold text-ink">The unboxing experience</h4>
@@ -897,6 +1039,33 @@ function HomePage() {
                       <strong className="font-semibold text-ink/70">AR marine animals</strong> and
                       collect <strong className="font-semibold text-ink/70">Achievements</strong>.
                     </p>
+                    <div className="mt-10">
+                      <p className="flex items-center gap-2 text-sm font-semibold uppercase tracking-[0.25em] text-pink">
+                        <Sparkle className="h-4 w-4 shrink-0" />
+                        Beyond the box — care that continues
+                      </p>
+                      <p className="mt-3 leading-relaxed text-ink/70">
+                        Saijai&apos;s commitment to “use longer, waste less” doesn&apos;t stop at unboxing:
+                      </p>
+                      <div className="mt-4 grid gap-x-6 gap-y-5 sm:grid-cols-2">
+                        {[
+                          ["↻", "Repair service", "At a reduced price, to keep clothes in use longer."],
+                          ["♻", "Take-back & recycle program", "Return old pieces for a discount on your next purchase."],
+                          ["↗", "Second-hand collaboration", "A scan-to-resell tag that gives garments another owner."],
+                          ["✦", "Annual upcycled gift", "A limited piece made from reclaimed material."],
+                        ].map(([icon, title, description]) => (
+                          <div key={title} className="flex items-start gap-3">
+                            <span className="grid h-10 w-10 shrink-0 place-items-center rounded-full bg-soft-blue text-lg font-bold text-pink-deep">
+                              {icon}
+                            </span>
+                            <div>
+                              <h4 className="font-semibold text-ink">{title}</h4>
+                              <p className="mt-1 text-sm leading-relaxed text-ink/65">{description}</p>
+                            </div>
+                          </div>
+                        ))}
+                      </div>
+                    </div>
                     <div className="mt-5 rounded-[18px] bg-cream/70 p-5">
                       <h4 className="font-display text-xl font-bold text-ink">
                         Structure &amp; materials
@@ -927,29 +1096,89 @@ function HomePage() {
                       loading="lazy"
                       className="mt-5 w-full rounded-[18px] border border-ink/10 object-cover"
                     />
-                    <div className="mt-5 border-t border-ink/10 pt-5">
+                    <div className="mt-10">
                       <p className="flex items-center gap-2 text-sm font-semibold uppercase tracking-[0.25em] text-pink">
                         <Sparkle className="h-4 w-4 shrink-0" />
-                        Who It&apos;s For
+                        Prototype Testing &amp; Iteration
                       </p>
+                      <p className="mt-4 leading-relaxed text-ink/70">
+                        Hands-on prototype reviews focused on balancing two requirements: a package
+                        strong enough to protect the clothing in transit, and a folded hanger strong
+                        enough to support the garment in use. We refined the overall proportions,
+                        strengthened the locking points, and adjusted the fold structure to improve
+                        stability in both configurations.
+                      </p>
+                      <div className="mt-4 grid gap-4 sm:grid-cols-3">
+                        <div className="rounded-[18px] bg-canvas-alt p-5">
+                          <span className="grid h-9 w-9 place-items-center rounded-full bg-card text-sm font-bold text-pink-deep">?</span>
+                          <p className="mt-4 text-xs font-semibold uppercase tracking-[0.18em] text-pink">
+                            Finding
+                          </p>
+                          <p className="mt-3 text-sm leading-relaxed text-ink/70">
+                            Early proportions and locking points needed more stability when the box
+                            was converted into a hanger.
+                          </p>
+                        </div>
+                        <div className="rounded-[18px] bg-soft-blue p-5">
+                          <span className="grid h-9 w-9 place-items-center rounded-full bg-card text-lg font-bold text-pink-deep">↻</span>
+                          <p className="mt-4 text-xs font-semibold uppercase tracking-[0.18em] text-pink">
+                            Iteration
+                          </p>
+                          <p className="mt-3 text-sm leading-relaxed text-ink/70">
+                            We adjusted the dimensions, reinforced the locks, and strengthened the
+                            fold lines and load-bearing areas.
+                          </p>
+                        </div>
+                        <div className="rounded-[18px] bg-sun/35 p-5">
+                          <span className="grid h-9 w-9 place-items-center rounded-full bg-card text-lg font-bold text-pink-deep">✓</span>
+                          <p className="mt-4 text-xs font-semibold uppercase tracking-[0.18em] text-pink">
+                            Outcome
+                          </p>
+                          <p className="mt-3 text-sm leading-relaxed text-ink/70">
+                            The final structure protects the product as packaging and reliably
+                            supports the weight of clothing as a reusable hanger.
+                          </p>
+                        </div>
+                      </div>
                     </div>
                   </div>
-                  <div className="mt-5 border-t border-ink/10 pt-5">
+                  <div className="mt-10">
+                    <p className="flex items-center gap-2 text-sm font-semibold uppercase tracking-[0.25em] text-pink">
+                      <Sparkle className="h-4 w-4 shrink-0" />
+                      Outcome &amp; Impact
+                    </p>
+                    <h4 className="mt-4 font-display text-2xl font-bold text-ink">
+                      Recognised, and measurable
+                    </h4>
+                    <div className="mt-4 grid gap-4 sm:grid-cols-3">
+                      <div className="rounded-[18px] border border-ink/15 bg-card p-5">
+                        <p className="font-display text-xl font-bold text-ink">
+                          Honorable Mention
+                        </p>
+                        <p className="mt-2 text-sm leading-relaxed text-ink/65">
+                          SCGP Packaging Speak Out 2024
+                        </p>
+                      </div>
+                      <div className="rounded-[18px] border border-ink/15 bg-card p-5">
+                        <p className="font-display text-2xl font-bold text-pink-deep">4.32M L</p>
+                        <p className="mt-2 text-sm leading-relaxed text-ink/65">
+                          clean water returned (projected Phase 1) ≈ 2 Olympic pools
+                        </p>
+                      </div>
+                      <div className="rounded-[18px] border border-ink/15 bg-card p-5">
+                        <p className="font-display text-2xl font-bold text-pink-deep">~35%</p>
+                        <p className="mt-2 text-sm leading-relaxed text-ink/65">
+                          margin at 939 THB retail · 649 THB cost
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  <div className="mt-10">
                     <p className="flex items-center gap-2 text-sm font-semibold uppercase tracking-[0.25em] text-pink">
                       <Sparkle className="h-4 w-4 shrink-0" />
                       Gallery
                     </p>
                     <div className="mt-4 grid gap-4 sm:grid-cols-2 sm:items-start">
-                      <div className="aspect-square overflow-hidden rounded-[18px] border border-ink/10">
-                        <img
-                          src={saijaiGalleryProcess}
-                          alt="SAIJAI packaging prototype displayed at Packaging Speak Out"
-                          width={1350}
-                          height={1800}
-                          loading="lazy"
-                          className="h-full w-full object-cover object-center"
-                        />
-                      </div>
                       <div className="aspect-square overflow-hidden rounded-[18px] border border-ink/10">
                         <img
                           src={saijaiGalleryAward}
@@ -960,10 +1189,487 @@ function HomePage() {
                           className="h-full w-full object-cover object-center"
                         />
                       </div>
+                      <div className="aspect-square overflow-hidden rounded-[18px] border border-ink/10">
+                        <img
+                          src={saijaiGalleryProcess}
+                          alt="SAIJAI packaging prototype displayed at Packaging Speak Out"
+                          width={1350}
+                          height={1800}
+                          loading="lazy"
+                          className="h-full w-full object-cover object-center"
+                        />
+                      </div>
                     </div>
                   </div>
                 </div>
               )}
+              {active.id === "buddy-journey" && (
+                <div className="space-y-10">
+                  <section>
+                    <p className="flex items-center gap-2 text-sm font-semibold uppercase tracking-[0.25em] text-pink">
+                      <Sparkle className="h-4 w-4 shrink-0" />
+                      The Problem
+                    </p>
+                    <h4 className="mt-4 font-display text-2xl font-bold text-ink">
+                      Moving cities can mean starting every relationship again
+                    </h4>
+                    <p className="mt-3 leading-relaxed text-ink/70">
+                      University students who relocate lose familiar support networks while adapting
+                      to an unfamiliar, fast-paced environment. The research distinguishes between{" "}
+                      <strong className="font-semibold text-ink">social loneliness</strong> — not
+                      having enough social interaction — and{" "}
+                      <strong className="font-semibold text-ink">emotional loneliness</strong> —
+                      lacking relationships that feel close, safe, and understood.
+                    </p>
+                    <p className="mt-6 text-xs font-semibold uppercase tracking-[0.2em] text-pink">
+                      Impact of Loneliness
+                    </p>
+                    <img
+                      src={buddyLonelinessImpact}
+                      alt="Senior project slide showing that 83 percent of people in the referenced Thai survey experience loneliness and its effects on mental health, physical health, education, social skills, work, and relationships"
+                      width={1800}
+                      height={1013}
+                      loading="lazy"
+                      className="mt-4 w-full rounded-[18px] border border-ink/10 object-cover"
+                    />
+                    <p className="mt-5 leading-relaxed text-ink/70">
+                      Students who relocate are especially vulnerable because they must rebuild
+                      their social network while navigating academic pressure, an unfamiliar city,
+                      and the loss of everyday emotional support. Without help at the right moment,
+                      temporary isolation can become a longer pattern of withdrawal.
+                    </p>
+                    <img
+                      src={buddyProblem}
+                      alt="Buddy Journey problem overview about loneliness among young people in Thailand"
+                      width={1800}
+                      height={1013}
+                      loading="lazy"
+                      className="mt-5 w-full rounded-[18px] border border-ink/10 object-cover"
+                    />
+                    <p className="mt-2 text-xs leading-relaxed text-ink/55">
+                      Sources referenced in the project: WHO; Weiss (1973); ThaiHealth and Jitarsa
+                      Bank; Journal of Affective Disorders (2021).
+                    </p>
+                  </section>
+
+                  <section>
+                    <p className="flex items-center gap-2 text-sm font-semibold uppercase tracking-[0.25em] text-pink">
+                      <Sparkle className="h-4 w-4 shrink-0" />
+                      Research
+                    </p>
+                    <h4 className="mt-4 font-display text-2xl font-bold text-ink">
+                      Understanding loneliness across four stages of relocation
+                    </h4>
+                    <p className="mt-3 leading-relaxed text-ink/70">
+                      Interviews with <strong className="font-semibold text-ink">15 students</strong>{" "}
+                      explored their background, expectations before moving, adjustment period,
+                      first social experiences, coping behaviours, and moments of loneliness. The
+                      journey was mapped across pre-arrival, newly arrived, adjustment, and settled
+                      stages to reveal where support is most useful. Interview findings were then
+                      synthesised through an <strong className="font-semibold text-ink">Experience Map</strong>,
+                      connecting behaviours, thoughts, emotions, pain points, and unmet needs across
+                      each stage. This analysis identified the moments where students needed emotional
+                      preparation, a safer way to initiate contact, and support for sustaining new
+                      relationships.
+                    </p>
+                    <img
+                      src={buddyResearchPhases}
+                      alt="Four stages of student relocation used in Buddy Journey research"
+                      width={1800}
+                      height={1013}
+                      loading="lazy"
+                      className="mt-5 w-full rounded-[18px] border border-ink/10 object-cover"
+                    />
+                    <div className="mt-5 grid gap-4 sm:grid-cols-3">
+                      <div className="rounded-[18px] bg-canvas-alt p-5">
+                        <p className="font-display text-2xl font-bold text-pink-deep">15</p>
+                        <p className="mt-2 text-sm text-ink/65">student interviews</p>
+                      </div>
+                      <div className="rounded-[18px] bg-soft-blue p-5">
+                        <p className="font-display text-2xl font-bold text-pink-deep">4</p>
+                        <p className="mt-2 text-sm text-ink/65">relocation stages</p>
+                      </div>
+                      <div className="rounded-[18px] bg-sun/35 p-5">
+                        <p className="font-display text-2xl font-bold text-pink-deep">2</p>
+                        <p className="mt-2 text-sm text-ink/65">dimensions of loneliness</p>
+                      </div>
+                    </div>
+                  </section>
+
+                  <section>
+                    <p className="flex items-center gap-2 text-sm font-semibold uppercase tracking-[0.25em] text-pink">
+                      <Sparkle className="h-4 w-4 shrink-0" />
+                      Target Segmentation
+                    </p>
+                    <h4 className="mt-4 font-display text-2xl font-bold text-ink">
+                      Selecting the audience with the greatest unmet need
+                    </h4>
+                    <p className="mt-3 leading-relaxed text-ink/70">
+                      The audience was segmented by social relationships, social confidence, and
+                      the type of loneliness experienced. This helped the project focus on students
+                      who want meaningful connection but lack the confidence, skills, or trusted
+                      setting needed to begin and sustain new friendships.
+                    </p>
+                    <img
+                      src={buddyTargetSegmentation}
+                      alt="Buddy Journey target segmentation comparing five student social relationship profiles"
+                      width={1800}
+                      height={1013}
+                      loading="lazy"
+                      className="mt-5 w-full rounded-[18px] border border-ink/10 object-cover"
+                    />
+                  </section>
+
+                  <section>
+                    <p className="flex items-center gap-2 text-sm font-semibold uppercase tracking-[0.25em] text-pink">
+                      <Sparkle className="h-4 w-4 shrink-0" />
+                      Design Challenge
+                    </p>
+                    <div className="mt-4 rounded-[18px] border border-pink/25 bg-soft-blue/70 px-5 py-4">
+                      <p className="text-lg font-semibold leading-relaxed text-pink-deep">
+                        How might we help students who move to a new city begin, deepen, and sustain
+                        safe friendships — without making social connection feel forced?
+                      </p>
+                    </div>
+                    <img
+                      src={buddyPersona}
+                      alt="Buddy Journey persona for a first-year student moving from Chiang Mai"
+                      width={1800}
+                      height={1013}
+                      loading="lazy"
+                      className="mt-5 w-full rounded-[18px] border border-ink/10 object-cover"
+                    />
+                  </section>
+
+                  <section>
+                    <p className="flex items-center gap-2 text-sm font-semibold uppercase tracking-[0.25em] text-pink">
+                      <Sparkle className="h-4 w-4 shrink-0" />
+                      The Concept
+                    </p>
+                    <h4 className="mt-4 font-display text-2xl font-bold text-ink">
+                      A companion for the journey into a new city
+                    </h4>
+                    <p className="mt-3 leading-relaxed text-ink/70">
+                      Buddy Journey supports students before and after relocation through verified,
+                      interest-led small groups. An AI advisor helps users prepare for social
+                      situations, while shared activities, guided conversation, reflection, and
+                      memory keeping help acquaintances grow into lasting friendships.
+                    </p>
+                    <img
+                      src={buddyDifferentiation}
+                      alt="Key differentiators of Buddy Journey"
+                      width={1800}
+                      height={1013}
+                      loading="lazy"
+                      className="mt-5 w-full rounded-[18px] border border-ink/10 object-cover"
+                    />
+                  </section>
+
+                  <section>
+                    <p className="flex items-center gap-2 text-sm font-semibold uppercase tracking-[0.25em] text-pink">
+                      <Sparkle className="h-4 w-4 shrink-0" />
+                      Design Direction
+                    </p>
+                    <h4 className="mt-4 font-display text-2xl font-bold text-ink">
+                      Friendly, hopeful, and easy to approach
+                    </h4>
+                    <p className="mt-3 leading-relaxed text-ink/70">
+                      The visual direction uses soft blue, warm yellow, rounded forms, and a friendly
+                      companion character to make meeting new people feel safer and less intimidating.
+                    </p>
+                    <img
+                      src={buddyDesignDirection}
+                      alt="Buddy Journey design direction showing the visual language across the application and bonding kit"
+                      width={1800}
+                      height={1013}
+                      loading="lazy"
+                      className="mt-5 w-full rounded-[18px] border border-ink/10 object-cover"
+                    />
+                    <div className="mt-7">
+                      <p className="text-xs font-semibold uppercase tracking-[0.2em] text-pink">
+                        Design Principles
+                      </p>
+                      <h4 className="mt-3 font-display text-2xl font-bold text-ink">
+                        Every decision is grounded in research
+                      </h4>
+                      <p className="mt-3 leading-relaxed text-ink/70">
+                        The experience was designed from the relocation journey, interview insights,
+                        and the two dimensions of loneliness. These principles guided the service,
+                        interface, visual language, and physical touchpoints throughout the project.
+                      </p>
+                      <div className="mt-5 grid gap-x-6 gap-y-5 sm:grid-cols-2">
+                        {[
+                          ["Safety & Trust", "Verified identities and group-first activities create a safer place to begin."],
+                          ["Low-pressure Interaction", "Prompts, interest cues, and an AI advisor reduce the pressure of starting a conversation."],
+                          ["Progressive Connection", "Each touchpoint supports relationships from preparation and first contact to shared memories."],
+                          ["Digital-to-Physical Continuity", "The application and Bonding Kit work together so connection continues beyond the screen."],
+                        ].map(([title, description]) => (
+                          <div key={title} className="border-l-2 border-sun pl-4">
+                            <h5 className="font-semibold text-ink">{title}</h5>
+                            <p className="mt-1 text-sm leading-relaxed text-ink/65">{description}</p>
+                          </div>
+                        ))}
+                      </div>
+                    </div>
+                  </section>
+
+                  <section>
+                    <p className="flex items-center gap-2 text-sm font-semibold uppercase tracking-[0.25em] text-pink">
+                      <Sparkle className="h-4 w-4 shrink-0" />
+                      Solution
+                    </p>
+                    <h4 className="mt-4 font-display text-2xl font-bold text-ink">
+                      Digital guidance, offline connection
+                    </h4>
+                    <p className="mt-3 leading-relaxed text-ink/70">
+                      The service combines an application for matching, check-ins, community,
+                      activity discovery, relationship progress, and memories with a physical
+                      Bonding Kit. NFC profiles and interest pins act as social cues that make the
+                      first conversation easier and give people something tangible to share.
+                    </p>
+                    <img
+                      src={buddyTouchpoints}
+                      alt="Buddy Journey application and physical bonding kit touchpoints"
+                      width={1800}
+                      height={1013}
+                      loading="lazy"
+                      className="mt-5 w-full rounded-[18px] border border-ink/10 object-cover"
+                    />
+                    <div className="mt-5 grid gap-x-6 gap-y-5 sm:grid-cols-2">
+                      {[
+                        ["01", "Prepare", "Check in, reframe expectations, and practise social situations with an AI advisor."],
+                        ["02", "Connect", "Join verified, interest-led small groups and preview who will attend."],
+                        ["03", "Build", "Use guided activities, prompts, and the Bonding Kit to make interaction easier."],
+                        ["04", "Continue", "Reflect, track relationship progress, and preserve shared memories."],
+                      ].map(([number, title, description]) => (
+                        <div key={number} className="flex items-start gap-3">
+                          <span className="grid h-10 w-10 shrink-0 place-items-center rounded-full bg-soft-blue text-xs font-bold text-pink-deep">
+                            {number}
+                          </span>
+                          <div>
+                            <h5 className="font-semibold text-ink">{title}</h5>
+                            <p className="mt-1 text-sm leading-relaxed text-ink/65">{description}</p>
+                          </div>
+                        </div>
+                      ))}
+                    </div>
+                  </section>
+
+                  <section>
+                    <p className="flex items-center gap-2 text-sm font-semibold uppercase tracking-[0.25em] text-pink">
+                      <Sparkle className="h-4 w-4 shrink-0" />
+                      Application Design
+                    </p>
+                    <h4 className="mt-4 font-display text-2xl font-bold text-ink">
+                      Support at every stage of a new relationship
+                    </h4>
+                    <p className="mt-3 leading-relaxed text-ink/70">
+                      The application translates the design principles into four connected experiences:
+                      private emotional check-ins, AI-supported social preparation, interest-led community
+                      activities, and a memory journey that makes relationship progress visible.
+                    </p>
+                    <div className="mt-5 space-y-5">
+                      {[buddyApplication31, buddyApplication32, buddyApplication33, buddyApplication34].map((image, index) => (
+                        <img
+                          key={image}
+                          src={image}
+                          alt={`Buddy Journey application design presentation page ${index + 31}`}
+                          width={2600}
+                          height={1463}
+                          loading="lazy"
+                          className="w-full rounded-[18px] border border-ink/10 object-cover"
+                        />
+                      ))}
+                    </div>
+                  </section>
+
+                  <section>
+                    <p className="flex items-center gap-2 text-sm font-semibold uppercase tracking-[0.25em] text-pink">
+                      <Sparkle className="h-4 w-4 shrink-0" />
+                      Bonding Kit
+                    </p>
+                    <h4 className="mt-4 font-display text-2xl font-bold text-ink">
+                      A physical bridge from first contact to shared memories
+                    </h4>
+                    <p className="mt-3 leading-relaxed text-ink/70">
+                      The wearable NFC buddy and collectible pin system provide identity cues,
+                      conversation starters, proof of shared activities, and tangible memory tokens.
+                    </p>
+                    <div className="mt-5 space-y-5">
+                      {[buddyBondingKit35, buddyBondingKit36].map((image, index) => (
+                        <img
+                          key={image}
+                          src={image}
+                          alt={`Buddy Journey Bonding Kit presentation page ${index + 35}`}
+                          width={2600}
+                          height={1463}
+                          loading="lazy"
+                          className="w-full rounded-[18px] border border-ink/10 object-cover"
+                        />
+                      ))}
+                    </div>
+                    <figure className="mt-5">
+                      <img
+                        src={buddyBondingKit}
+                        alt="Buddy Journey Bonding Kit drawer box packaging design"
+                        width={1800}
+                        height={1013}
+                        loading="lazy"
+                        className="w-full rounded-[18px] border border-ink/10 object-cover"
+                      />
+                      <figcaption className="mt-2 text-xs leading-relaxed text-ink/55">
+                        Bonding Kit — drawer box packaging design
+                      </figcaption>
+                    </figure>
+                  </section>
+
+                  <section>
+                    <p className="flex items-center gap-2 text-sm font-semibold uppercase tracking-[0.25em] text-pink">
+                      <Sparkle className="h-4 w-4 shrink-0" />
+                      Buddy Journey Mascot Character Design
+                    </p>
+                    <p className="mt-4 leading-relaxed text-ink/70">
+                      The mascot acts as a warm AI companion, using expressive states to acknowledge
+                      emotion, celebrate progress, and make guidance feel supportive rather than clinical.
+                    </p>
+                    <img
+                      src={buddyMascotCharacter}
+                      alt="Buddy Journey mascot character expressions"
+                      width={3000}
+                      height={1688}
+                      loading="lazy"
+                      className="mt-5 w-full rounded-[18px] border border-ink/10 object-cover"
+                    />
+                  </section>
+
+                  <section>
+                    <p className="flex items-center gap-2 text-sm font-semibold uppercase tracking-[0.25em] text-pink">
+                      <Sparkle className="h-4 w-4 shrink-0" />
+                      Prototype Testing &amp; Iteration
+                    </p>
+                    <p className="mt-4 leading-relaxed text-ink/70">
+                      Participants completed the core flow: onboarding, selecting interests,
+                      checking in, joining the community, choosing a Rooftop Cinema activity, and
+                      reflecting afterward. Testing showed that onboarding was clear, but the next
+                      action in Community needed stronger direction, event imagery needed greater
+                      prominence, reflection needed fewer steps, and people wanted to see who was
+                      attending before joining.
+                    </p>
+                    <img
+                      src={buddyTesting}
+                      alt="Buddy Journey prototype testing tasks, observations, and findings"
+                      width={1800}
+                      height={1013}
+                      loading="lazy"
+                      className="mt-5 w-full rounded-[18px] border border-ink/10 object-cover"
+                    />
+                  </section>
+
+                  <section>
+                    <p className="flex items-center gap-2 text-sm font-semibold uppercase tracking-[0.25em] text-pink">
+                      <Sparkle className="h-4 w-4 shrink-0" />
+                      Final Experience
+                    </p>
+                    <h4 className="mt-4 font-display text-2xl font-bold text-ink">
+                      One journey, from preparation to belonging
+                    </h4>
+                    <div className="mt-4 rounded-[18px] border border-ink/10 bg-soft-blue/55 px-5 py-4">
+                      <p className="text-sm leading-relaxed text-ink/70">
+                        <strong className="font-semibold text-ink">Prototype note:</strong> The flows
+                        shown here represent selected parts of the intended end-to-end experience.
+                        The interactive prototype is currently being refined to resolve technical
+                        issues and improve transition consistency, interaction feedback, and overall
+                        usability before the complete flow is published.
+                      </p>
+                    </div>
+                    <div className="mt-5 space-y-5">
+                      <img src={buddyUiFlow} alt="Buddy Journey end-to-end UI flow" width={1800} height={1013} loading="lazy" className="w-full rounded-[18px] border border-ink/10 object-cover" />
+                      <img src={buddyPoints} alt="Buddy points and relationship progress screens" width={1800} height={1013} loading="lazy" className="w-full rounded-[18px] border border-ink/10 object-cover" />
+                    </div>
+                  </section>
+
+                  <section>
+                    <p className="flex items-center gap-2 text-sm font-semibold uppercase tracking-[0.25em] text-pink">
+                      <Sparkle className="h-4 w-4 shrink-0" />
+                      Community Flow
+                    </p>
+                    <p className="mt-3 leading-relaxed text-ink/70">
+                      A closer look at how users discover an interest-based community, explore
+                      relevant activities, join a sub-community, and create a post to begin
+                      participating with low pressure.
+                    </p>
+                    <img
+                      src={buddyCommunityFlow}
+                      alt="Buddy Journey introduced community flow from presentation page 117"
+                      width={3000}
+                      height={1688}
+                      loading="lazy"
+                      className="mt-5 w-full rounded-[18px] border border-ink/10 object-cover"
+                    />
+                  </section>
+
+                  <section>
+                    <p className="flex items-center gap-2 text-sm font-semibold uppercase tracking-[0.25em] text-pink">
+                      <Sparkle className="h-4 w-4 shrink-0" />
+                      Gallery
+                    </p>
+                    <p className="mt-3 text-sm text-ink/55">Swipe or scroll to explore the gallery →</p>
+                    <div className="mt-5 flex snap-x snap-mandatory gap-4 overflow-x-auto pb-4">
+                      {[
+                        [buddyGalleryBondingKit, "Buddy Journey Bonding Kit and welcome card"],
+                        [buddyGalleryBump, "Two users connecting their Buddy Journey NFC wearables"],
+                        [buddyGalleryPins, "Setting up and wearing Buddy Journey interest pins"],
+                        [buddyGalleryMeet, "Friends meeting while wearing Buddy Journey bonding devices"],
+                        [buddyGalleryApplicationCheckin, "Buddy Journey application check-in and social support screens"],
+                        [buddyGalleryApplicationJourney, "Buddy Journey application journey, community, and memory screens"],
+                      ].map(([image, alt]) => (
+                        <div key={image} className="aspect-[3/4] w-[78%] shrink-0 snap-start overflow-hidden rounded-[18px] border border-ink/10 sm:w-[46%]">
+                          <img src={image} alt={alt} width={1012} height={1350} loading="lazy" className="h-full w-full object-cover" />
+                        </div>
+                      ))}
+                    </div>
+                  </section>
+
+                  <img
+                    src={buddyClosing}
+                    alt="Buddy Journey closing graphic with the message New City, New Journey, Never Alone"
+                    width={1888}
+                    height={736}
+                    loading="lazy"
+                    className="w-full rounded-[18px] border border-ink/10 object-cover"
+                  />
+                </div>
+              )}
+              <div className="mt-8 grid gap-3 border-t border-ink/10 pt-6 sm:grid-cols-2">
+                {previousProject ? (
+                  <button
+                    type="button"
+                    onClick={() => setActive(previousProject)}
+                    className="rounded-[18px] border border-ink/15 bg-canvas px-5 py-4 text-left transition-colors hover:border-pink hover:bg-canvas-alt"
+                  >
+                    <span className="text-xs font-semibold uppercase tracking-[0.18em] text-pink">
+                      ← Previous project
+                    </span>
+                    <span className="mt-2 block font-display text-lg font-bold text-ink">
+                      {previousProject.title}
+                    </span>
+                  </button>
+                ) : <span />}
+                {nextProject && (
+                  <button
+                    type="button"
+                    onClick={() => setActive(nextProject)}
+                    className="rounded-[18px] border border-ink/15 bg-canvas px-5 py-4 text-left transition-colors hover:border-pink hover:bg-canvas-alt sm:text-right"
+                  >
+                    <span className="text-xs font-semibold uppercase tracking-[0.18em] text-pink">
+                      Next project →
+                    </span>
+                    <span className="mt-2 block font-display text-lg font-bold text-ink">
+                      {nextProject.title}
+                    </span>
+                  </button>
+                )}
+              </div>
             </div>
           </div>
         </div>
