@@ -38,6 +38,7 @@ import projectRockingLife from "../assets/project-rocking-life.jpg";
 import projectCircusSweet from "../assets/project-circus-sweet.jpg";
 import projectNewsphoter from "../assets/project-newsphoter.jpg";
 import projectNami from "../assets/project-nami.jpg";
+import namiGalleryVase from "../assets/nami-gallery-vase.png";
 import projectLandmark from "../assets/project-landmark.jpg";
 import buddyCover from "../assets/buddy-card-cover.png";
 import buddyDesignDirection from "../assets/buddy-cover.jpg";
@@ -67,6 +68,21 @@ import buddyGalleryApplicationCheckin from "../assets/buddy-gallery-application-
 import buddyGalleryApplicationJourney from "../assets/buddy-gallery-application-journey.png";
 import buddyClosing from "../assets/buddy-closing.png";
 import buddyCommunityFlow from "../assets/buddy-page-117.jpg";
+import popFreshPersona from "../assets/pop-fresh-page-2.jpg";
+import popFreshJourneyMap from "../assets/pop-fresh-page-4.jpg";
+import popFreshPainPoints from "../assets/pop-fresh-page-5.jpg";
+import popFreshConcept from "../assets/pop-fresh-concept-station.png";
+import popFreshTouchpoints from "../assets/pop-fresh-page-9.jpg";
+import popFreshVisualSystem from "../assets/pop-fresh-page-13.jpg";
+import popFreshPerspective from "../assets/pop-fresh-page-17.jpg";
+import popFreshApplication from "../assets/pop-fresh-page-20.jpg";
+import popFreshLockerFlow from "../assets/pop-fresh-page-32.jpg";
+import popFreshPackaging from "../assets/pop-fresh-page-45.jpg";
+import popFreshScenario from "../assets/pop-fresh-page-53.jpg";
+import popFreshTestingApp from "../assets/pop-fresh-page-57.jpg";
+import popFreshTestingLocker from "../assets/pop-fresh-page-59.jpg";
+import popFreshTestingVending from "../assets/pop-fresh-page-60.jpg";
+import popFreshTestingTable from "../assets/pop-fresh-page-61.jpg";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -112,7 +128,7 @@ const FILTERS = ["All", "UX·UI", "Branding", "Interior·3D", "Product"] as cons
 const PROJECTS: Project[] = [
   {
     id: "buddy-journey",
-    title: "Buddy Journey Senior Project",
+    title: "Buddy Journey - Senior Project",
     category: "UX·UI",
     desc: "An experience platform helping university students who move to a new city build meaningful friendships and navigate loneliness.",
     detail:
@@ -166,6 +182,7 @@ const PROJECTS: Project[] = [
     role: "Research | Interview | Function design | Usability test | UX design | UI design | Branding design",
     tools: ["Illustrator", "Google Forms", "Procreate"],
     image: projectPopFreshFood,
+    timeline: "Service design project",
     team: "5 members from the Department of Industrial Design, Faculty of Architecture, Chulalongkorn University",
   },
   {
@@ -250,9 +267,9 @@ const PROJECTS: Project[] = [
     id: "nami",
     title: "Nami",
     category: "Product",
-    desc: "A clear-acrylic vase collection inspired by waves that protect and embrace.",
+    desc: "A vase that protects flowers like water protects Chihiro Ogino in Spirited Away.",
     detail:
-      "Inspired by a scene from Spirited Away, Nami uses fluid forms to cradle and protect flowers. Curves and movement express a nurturing embrace, while light passing through the clear acrylic creates reflective waves that bring unity and harmony to the collection.",
+      "Inspired by a scene from Spirited Away, Nami is a clear-acrylic vase collection designed to protect flowers in the same way water protects Chihiro Ogino. Its fluid curves cradle each stem in a nurturing embrace, while light passing through the acrylic creates reflective waves that bring unity and harmony to the collection.",
     role: "Research | Concept design | Experiment | Prototype test | Product design | 3D modeling & rendering",
     tools: ["Heat gun", "Acrylic bending"],
     image: projectNami,
@@ -288,18 +305,18 @@ const PROJECT_ORDER = [
 
 const CASE_STUDY_META: Record<string, { label: string; focus: string }> = {
   "buddy-journey": { label: "", focus: "Service design · UX/UI · Social connection" },
-  kbtg: { label: "Featured case study · 02", focus: "Roommate matching · UX/UI · Prototyping" },
+  kbtg: { label: "", focus: "Roommate matching · UX/UI · Prototyping" },
   saijai: { label: "", focus: "Branding · Packaging · Sustainability" },
-  brand: { label: "Selected project · 04", focus: "Service design · UX design · Healthy habits" },
-  interior: { label: "Selected project · 05", focus: "Cultural tourism · Space planning · Rendering" },
-  product: { label: "Selected project · 06", focus: "Experience design · UX/UI · Prototyping" },
-  "self-love": { label: "Selected project · 07", focus: "Interior design · Memphis style · Rendering" },
-  "ooh-juicy": { label: "Selected project · 08", focus: "Brand identity · Packaging · Character" },
-  "rocking-life": { label: "Selected project · 09", focus: "Product design · Balance · Prototyping" },
-  "circus-sweet": { label: "Selected project · 10", focus: "Character design · 3D printing · Rendering" },
-  newsphoter: { label: "Selected project · 11", focus: "Jewelry · Storytelling · Graphic composition" },
-  nami: { label: "Selected project · 12", focus: "Product design · Acrylic bending · Light" },
-  landmark: { label: "Selected project · 13", focus: "Event graphics · Space planning · Installation" },
+  brand: { label: "", focus: "Service design · UX design · Healthy habits" },
+  interior: { label: "", focus: "Cultural tourism · Space planning · Rendering" },
+  product: { label: "", focus: "Experience design · UX/UI · Prototyping" },
+  "self-love": { label: "", focus: "Interior design · Memphis style · Rendering" },
+  "ooh-juicy": { label: "", focus: "Brand identity · Packaging · Character" },
+  "rocking-life": { label: "", focus: "Product design · Balance · Prototyping" },
+  "circus-sweet": { label: "", focus: "Character design · 3D printing · Rendering" },
+  newsphoter: { label: "", focus: "Jewelry · Storytelling · Graphic composition" },
+  nami: { label: "", focus: "Product design · Acrylic bending · Light" },
+  landmark: { label: "", focus: "Event graphics · Space planning · Installation" },
 };
 
 const SOFTWARE: { name: string; mark: string; icon?: string }[] = [
@@ -637,10 +654,20 @@ function HomePage() {
 
             <div className="mt-8 rounded-[24px] border border-pink/45 bg-card p-6">
               <h3 className="font-display text-lg font-bold uppercase tracking-wide">Education</h3>
-              <p className="mt-2 font-semibold">Bachelor of Industrial Design (B.I.D)</p>
-              <p className="text-sm text-ink/65">
-                Faculty of Architecture, Chulalongkorn University · 2021 – Present
-              </p>
+              <p className="mt-3 font-semibold">Chulalongkorn University, Faculty of Architecture</p>
+              <p className="mt-1 text-sm text-ink/60">Bangkok, Thailand</p>
+              <p className="mt-4 text-sm italic text-ink/75">Bachelor of Industrial Design (B.I.D)</p>
+              <p className="mt-1 text-sm font-medium text-ink/75">Graduated: 2026</p>
+              <ul className="mt-4 space-y-3 border-t border-ink/10 pt-4 text-sm leading-relaxed text-ink/70">
+                <li className="flex gap-3">
+                  <span className="font-bold text-pink" aria-hidden="true">•</span>
+                  <span><strong className="font-semibold text-ink">GPAX (8 semesters):</strong> 3.66 / 4.0 — First Class Honors</span>
+                </li>
+                <li className="flex gap-3">
+                  <span className="font-bold text-pink" aria-hidden="true">•</span>
+                  <span><strong className="font-semibold text-ink">Relevant Coursework:</strong> UX/UI Design, Product Design, Branding &amp; Packaging Design, Design Research</span>
+                </li>
+              </ul>
             </div>
 
             <h3 className="mt-10 font-display text-lg font-bold uppercase tracking-wide">Software</h3>
@@ -799,6 +826,22 @@ function HomePage() {
                     </div>
                   )}
                 </div>
+              )}
+              {active.id === "nami" && (
+                <section className="pt-5">
+                  <p className="flex items-center gap-2 text-sm font-semibold uppercase tracking-[0.25em] text-pink">
+                    <Sparkle className="h-4 w-4 shrink-0" />
+                    Gallery
+                  </p>
+                  <img
+                    src={namiGalleryVase}
+                    alt="Nami transparent acrylic vase holding an orange flower"
+                    width={1233}
+                    height={1643}
+                    loading="lazy"
+                    className="mt-5 w-full rounded-[18px] border border-ink/10 object-cover"
+                  />
+                </section>
               )}
               {active.problem && (
                 <div className="border-y border-ink/10 py-5">
@@ -1203,6 +1246,233 @@ function HomePage() {
                   </div>
                 </div>
               )}
+              {active.id === "brand" && (
+                <div className="space-y-10">
+                  <section>
+                    <p className="flex items-center gap-2 text-sm font-semibold uppercase tracking-[0.25em] text-pink">
+                      <Sparkle className="h-4 w-4 shrink-0" />
+                      The Problem
+                    </p>
+                    <h4 className="mt-4 font-display text-2xl font-bold text-ink">
+                      Breakfast competes with an already rushed commute
+                    </h4>
+                    <p className="mt-3 leading-relaxed text-ink/70">
+                      Students travelling to Chulalongkorn University often have only a narrow window
+                      between arriving at the CU POP Bus stop and boarding. Leaving the queue to buy
+                      breakfast risks missing the bus, while portable options can be repetitive,
+                      nutritionally limited, difficult to carry, or disruptive in class.
+                    </p>
+                  </section>
+
+                  <section>
+                    <p className="flex items-center gap-2 text-sm font-semibold uppercase tracking-[0.25em] text-pink">
+                      <Sparkle className="h-4 w-4 shrink-0" />
+                      Research
+                    </p>
+                    <h4 className="mt-4 font-display text-2xl font-bold text-ink">
+                      Mapping the morning from home to classroom
+                    </h4>
+                    <p className="mt-3 leading-relaxed text-ink/70">
+                      The team developed a behavioural persona and mapped the experience across
+                      Entice, Enter, Engage, Exit, and Extend. The journey exposed how uncertainty
+                      about bus arrival, long queues, limited seating, heavy belongings, and fear of
+                      losing a place in line shape breakfast decisions.
+                    </p>
+                    <div className="mt-5 grid gap-4 sm:grid-cols-2 sm:items-start">
+                      <img src={popFreshPersona} alt="Pop Fresh Food student persona" width={2400} height={1350} loading="lazy" className="w-full rounded-[18px] border border-ink/10 object-cover" />
+                      <img src={popFreshJourneyMap} alt="Pop Fresh Food morning commute journey map" width={2400} height={1350} loading="lazy" className="w-full rounded-[18px] border border-ink/10 object-cover" />
+                    </div>
+                  </section>
+
+                  <blockquote className="rounded-[22px] border border-sun/70 bg-sun/25 px-6 py-7 text-center">
+                    <p className="font-display text-2xl font-bold leading-snug text-ink">
+                      “Any slower and I’ll miss the bus — but I’m starving. What can I do?”
+                    </p>
+                    <footer className="mt-3 text-sm font-semibold uppercase tracking-[0.18em] text-pink-deep">
+                      — Uno, 20
+                    </footer>
+                  </blockquote>
+
+                  <section>
+                    <p className="flex items-center gap-2 text-sm font-semibold uppercase tracking-[0.25em] text-pink">
+                      <Sparkle className="h-4 w-4 shrink-0" />
+                      Key Pain Points
+                    </p>
+                    <div className="mt-5 grid gap-5 sm:grid-cols-[0.9fr_1.1fr] sm:items-center">
+                      <div className="space-y-4">
+                        {[
+                          ["Time uncertainty", "Students cannot confidently judge whether there is enough time to buy food before the bus arrives."],
+                          ["Queue anxiety", "Leaving the line can mean losing a place, waiting several more buses, or arriving late."],
+                          ["Awkward portability", "Food can spill, smell, make noise, or be difficult to pack away quickly when boarding."],
+                        ].map(([title, description]) => (
+                          <div key={title} className="border-l-2 border-sun pl-4">
+                            <h5 className="font-semibold text-ink">{title}</h5>
+                            <p className="mt-1 text-sm leading-relaxed text-ink/65">{description}</p>
+                          </div>
+                        ))}
+                      </div>
+                      <img src={popFreshPainPoints} alt="Pop Fresh Food research pain points" width={2400} height={1350} loading="lazy" className="w-full rounded-[18px] border border-ink/10 object-cover" />
+                    </div>
+                  </section>
+
+                  <section>
+                    <p className="flex items-center gap-2 text-sm font-semibold uppercase tracking-[0.25em] text-pink">
+                      <Sparkle className="h-4 w-4 shrink-0" />
+                      Design Challenge
+                    </p>
+                    <div className="mt-4 rounded-[18px] border border-pink/25 bg-soft-blue/70 px-5 py-4">
+                      <p className="text-lg font-semibold leading-relaxed text-pink-deep">
+                        How might we help time-pressed students access a fresh, varied breakfast at
+                        the bus stop without leaving the queue or delaying their journey?
+                      </p>
+                    </div>
+                  </section>
+
+                  <section>
+                    <p className="flex items-center gap-2 text-sm font-semibold uppercase tracking-[0.25em] text-pink">
+                      <Sparkle className="h-4 w-4 shrink-0" />
+                      The Concept
+                    </p>
+                    <h4 className="mt-4 font-display text-2xl font-bold text-ink">
+                      Breakfast that fits the morning rush
+                    </h4>
+                    <p className="mt-3 leading-relaxed text-ink/70">
+                      Instead of choosing between breakfast and catching the bus, students get both in
+                      one place. Pop Fresh Food puts order-ahead lockers right at the CU POP BUS stop —
+                      pre-order in the app, scan to collect, and go. Breakfast finally fits into the
+                      minutes students already spend waiting for the bus, with no extra queue and no risk
+                      of losing their place.
+                    </p>
+                    <img src={popFreshConcept} alt="Pop Fresh Food service concept at a CU POP Bus stop" width={2400} height={1350} loading="lazy" className="mt-5 w-full rounded-[18px] border border-ink/10 object-cover" />
+                    <div className="mt-5 grid gap-4 sm:grid-cols-3">
+                      {[
+                        ["01", "Accessible", "Breakfast is placed directly along the existing commute."],
+                        ["02", "Ready to go", "Pre-ordering and rapid pickup reduce waiting and uncertainty."],
+                        ["03", "Fresh variety", "Nearby food businesses extend their reach with more balanced choices."],
+                      ].map(([number, title, description]) => (
+                        <div key={number} className="rounded-[18px] bg-canvas-alt p-5">
+                          <p className="font-display text-2xl font-bold text-pink-deep">{number}</p>
+                          <h5 className="mt-2 font-semibold text-ink">{title}</h5>
+                          <p className="mt-1 text-sm leading-relaxed text-ink/65">{description}</p>
+                        </div>
+                      ))}
+                    </div>
+                  </section>
+
+                  <section>
+                    <p className="flex items-center gap-2 text-sm font-semibold uppercase tracking-[0.25em] text-pink">
+                      <Sparkle className="h-4 w-4 shrink-0" />
+                      Service Ecosystem
+                    </p>
+                    <p className="mt-3 leading-relaxed text-ink/70">
+                      Five touchpoints work as one service: smart lockers for pre-orders, vending for
+                      immediate purchases, an application for ordering and pickup guidance, a compact
+                      waiting space, and grab-and-go packaging. The ecosystem connects students, CU POP
+                      Bus, PMCU, nearby restaurants, beverage businesses, and packaging partners.
+                    </p>
+                    <img src={popFreshTouchpoints} alt="Pop Fresh Food service touchpoints" width={2400} height={1350} loading="lazy" className="mt-5 w-full rounded-[18px] border border-ink/10 object-cover" />
+                  </section>
+
+                  <section>
+                    <p className="flex items-center gap-2 text-sm font-semibold uppercase tracking-[0.25em] text-pink">
+                      <Sparkle className="h-4 w-4 shrink-0" />
+                      Visual &amp; Spatial Design
+                    </p>
+                    <p className="mt-3 leading-relaxed text-ink/70">
+                      The station keeps the recognisable CU POP Bus structure while using food-inspired
+                      colours, a neighbourhood food map, transparent storage, and high-visibility service
+                      zones. The compact design makes ordering, collecting, and packing away food legible
+                      within a fast-moving queue.
+                    </p>
+                    <div className="mt-5 space-y-5">
+                      <img src={popFreshVisualSystem} alt="Pop Fresh Food visual and spatial design system" width={2400} height={1350} loading="lazy" className="w-full rounded-[18px] border border-ink/10 object-cover" />
+                      <img src={popFreshPerspective} alt="Pop Fresh Food station perspective" width={2400} height={1350} loading="lazy" className="w-full rounded-[18px] border border-ink/10 object-cover" />
+                    </div>
+                  </section>
+
+                  <section>
+                    <p className="flex items-center gap-2 text-sm font-semibold uppercase tracking-[0.25em] text-pink">
+                      <Sparkle className="h-4 w-4 shrink-0" />
+                      Application &amp; Pickup Flow
+                    </p>
+                    <p className="mt-3 leading-relaxed text-ink/70">
+                      Students order and pay while travelling, receive pickup timing and locker location,
+                      then scan a QR code to open the assigned compartment automatically. The short flow
+                      is designed to minimise decisions and handling at the stop.
+                    </p>
+                    <div className="mt-5 space-y-5">
+                      <img src={popFreshApplication} alt="Pop Fresh Food advance ordering application" width={2400} height={1350} loading="lazy" className="w-full rounded-[18px] border border-ink/10 object-cover" />
+                      <img src={popFreshLockerFlow} alt="Pop Fresh Food QR locker pickup flow" width={2400} height={1350} loading="lazy" className="w-full rounded-[18px] border border-ink/10 object-cover" />
+                    </div>
+                  </section>
+
+                  <section>
+                    <p className="flex items-center gap-2 text-sm font-semibold uppercase tracking-[0.25em] text-pink">
+                      <Sparkle className="h-4 w-4 shrink-0" />
+                      Grab-and-Go Packaging
+                    </p>
+                    <p className="mt-3 leading-relaxed text-ink/70">
+                      A single-piece carrier closes securely, reduces noise, protects the meal from
+                      spilling, and can be carried quickly when the bus arrives. It allows food that is
+                      usually eaten in a restaurant to travel more comfortably.
+                    </p>
+                    <img src={popFreshPackaging} alt="Pop Fresh Food grab-and-go packaging sequence" width={2400} height={1350} loading="lazy" className="mt-5 w-full rounded-[18px] border border-ink/10 object-cover" />
+                  </section>
+
+                  <section>
+                    <p className="flex items-center gap-2 text-sm font-semibold uppercase tracking-[0.25em] text-pink">
+                      <Sparkle className="h-4 w-4 shrink-0" />
+                      Final Scenario
+                    </p>
+                    <p className="mt-3 leading-relaxed text-ink/70">
+                      The final scenario follows a student from discovering the service and ordering on
+                      the MRT to collecting breakfast, waiting comfortably, boarding the bus, and later
+                      returning to the local restaurant. It demonstrates how one service can support both
+                      healthier habits and nearby food businesses.
+                    </p>
+                    <img src={popFreshScenario} alt="Pop Fresh Food final service scenario" width={2400} height={1350} loading="lazy" className="mt-5 w-full rounded-[18px] border border-ink/10 object-cover" />
+                  </section>
+
+                  <section>
+                    <p className="flex items-center gap-2 text-sm font-semibold uppercase tracking-[0.25em] text-pink">
+                      <Sparkle className="h-4 w-4 shrink-0" />
+                      Prototype Testing &amp; Iteration
+                    </p>
+                    <p className="mt-3 leading-relaxed text-ink/70">
+                      The team tested advance ordering, locker collection, direct vending purchase, and
+                      the foldable waiting table. Participants valued the concise ordering flow,
+                      transparent food display, automatic locker opening, and accessible collection
+                      height. Testing also exposed wayfinding and ergonomics issues that informed the
+                      next iteration.
+                    </p>
+                    <div className="mt-5 grid gap-4 sm:grid-cols-2">
+                      <div className="rounded-[18px] bg-soft-blue p-5">
+                        <p className="font-display text-3xl font-bold text-pink-deep">150-175 cm</p>
+                        <p className="mt-2 text-sm leading-relaxed text-ink/65">Range of participant heights used to check locker reach.</p>
+                      </div>
+                      <div className="rounded-[18px] bg-sun/35 p-5">
+                        <p className="font-display text-3xl font-bold text-pink-deep">&lt; 15 sec</p>
+                        <p className="mt-2 text-sm leading-relaxed text-ink/65">Observed pickup time per participant in the tested flow.</p>
+                      </div>
+                    </div>
+                    <div className="mt-5 space-y-5">
+                      <img src={popFreshTestingApp} alt="Pop Fresh Food application prototype testing results" width={2400} height={1350} loading="lazy" className="w-full rounded-[18px] border border-ink/10 object-cover" />
+                      <img src={popFreshTestingLocker} alt="Pop Fresh Food locker prototype testing pain points" width={2400} height={1350} loading="lazy" className="w-full rounded-[18px] border border-ink/10 object-cover" />
+                      <img src={popFreshTestingVending} alt="Pop Fresh Food vending prototype testing results" width={2400} height={1350} loading="lazy" className="w-full rounded-[18px] border border-ink/10 object-cover" />
+                      <img src={popFreshTestingTable} alt="Pop Fresh Food foldable table prototype testing results" width={2400} height={1350} loading="lazy" className="w-full rounded-[18px] border border-ink/10 object-cover" />
+                    </div>
+                    <div className="mt-5 rounded-[18px] border border-ink/10 bg-canvas-alt p-5">
+                      <h5 className="font-semibold text-ink">What the next iteration should improve</h5>
+                      <p className="mt-2 text-sm leading-relaxed text-ink/65">
+                        Add clearer physical and in-app locker location cues, raise the lowest
+                        compartments and payment scanner, support multi-item vending orders, make the
+                        first-use flow more self-explanatory, and replace the table with a lighter
+                        luggage-support feature that does not obstruct the moving queue.
+                      </p>
+                    </div>
+                  </section>
+                </div>
+              )}
               {active.id === "buddy-journey" && (
                 <div className="space-y-10">
                   <section>
@@ -1399,14 +1669,19 @@ function HomePage() {
                       </p>
                       <div className="mt-5 grid gap-x-6 gap-y-5 sm:grid-cols-2">
                         {[
-                          ["Safety & Trust", "Verified identities and group-first activities create a safer place to begin."],
-                          ["Low-pressure Interaction", "Prompts, interest cues, and an AI advisor reduce the pressure of starting a conversation."],
-                          ["Progressive Connection", "Each touchpoint supports relationships from preparation and first contact to shared memories."],
-                          ["Digital-to-Physical Continuity", "The application and Bonding Kit work together so connection continues beyond the screen."],
-                        ].map(([title, description]) => (
-                          <div key={title} className="border-l-2 border-sun pl-4">
-                            <h5 className="font-semibold text-ink">{title}</h5>
-                            <p className="mt-1 text-sm leading-relaxed text-ink/65">{description}</p>
+                          ["✓", "Safety & Trust", "Verified identities and group-first activities create a safer place to begin."],
+                          ["✦", "Low-pressure Interaction", "Prompts, interest cues, and an AI advisor reduce the pressure of starting a conversation."],
+                          ["◎", "Progressive Connection", "Each touchpoint supports relationships from preparation and first contact to shared memories."],
+                          ["↔", "Digital-to-Physical Continuity", "The application and Bonding Kit work together so connection continues beyond the screen."],
+                        ].map(([icon, title, description]) => (
+                          <div key={title} className="flex items-start gap-3">
+                            <span className="grid h-10 w-10 shrink-0 place-items-center rounded-full bg-sun/55 text-lg font-bold text-pink-deep" aria-hidden="true">
+                              {icon}
+                            </span>
+                            <div>
+                              <h5 className="font-semibold text-ink">{title}</h5>
+                              <p className="mt-1 text-sm leading-relaxed text-ink/65">{description}</p>
+                            </div>
                           </div>
                         ))}
                       </div>
