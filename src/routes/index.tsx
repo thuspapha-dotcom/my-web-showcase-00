@@ -559,10 +559,10 @@ function HomePage() {
                     </span>
                   </div>
                   <div className="space-y-3 p-5">
-                    {CASE_STUDY_META[p.id].label && (
+                    {CASE_STUDY_META[p.id]?.label && (
                       <div className="border-b border-ink/10 pb-3">
                         <span className="text-[10px] font-bold uppercase tracking-[0.18em] text-pink">
-                          {CASE_STUDY_META[p.id].label}
+                          {CASE_STUDY_META[p.id]?.label}
                         </span>
                       </div>
                     )}
@@ -583,7 +583,7 @@ function HomePage() {
                       </div>
                       <div>
                         <p className="font-bold uppercase tracking-wider text-ink/60">Focus</p>
-                        <p className="mt-1 font-medium text-ink/75">{CASE_STUDY_META[p.id].focus}</p>
+                        <p className="mt-1 font-medium text-ink/75">{CASE_STUDY_META[p.id]?.focus}</p>
                       </div>
                     </div>
                     <div className="flex flex-wrap gap-1.5">
