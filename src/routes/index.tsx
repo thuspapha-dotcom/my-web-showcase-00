@@ -715,7 +715,6 @@ function HomePage() {
       <section id="contact" className="retro-stripes scroll-mt-20 border-x-[12px] border-ink px-5 py-24 sm:border-x-[28px] sm:px-8">
         <div className="mx-auto max-w-4xl rounded-[32px] border-2 border-dashed border-pink bg-card px-6 py-14 text-center sm:px-12">
           <Sparkle className="animate-twinkle mx-auto h-7 w-7 text-sun" />
-          <p className="mt-5 text-xs font-bold uppercase tracking-[0.22em] text-pink">Have a project in mind?</p>
           <h2 className="mt-3 font-display text-[clamp(3rem,8vw,6rem)] font-normal leading-[0.9] text-pink">
             Let&apos;s work together
           </h2>
@@ -730,12 +729,6 @@ function HomePage() {
               <Pill tone="soft">+66 83-514-5361</Pill>
             </a>
             <Pill tone="soft">Bangkok, Thailand</Pill>
-            <a href="https://www.behance.net/" target="_blank" rel="noopener noreferrer">
-              <Pill tone="soft">Behance</Pill>
-            </a>
-            <a href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer">
-              <Pill tone="soft">LinkedIn</Pill>
-            </a>
           </div>
         </div>
       </section>
