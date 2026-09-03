@@ -444,8 +444,10 @@ function HomePage() {
               Contact
             </a>
             <a
-              href="mailto:thuspapha@gmail.com?subject=Resume%20request"
-              className="rounded-full border border-sun bg-sun px-4 py-2 text-xs font-semibold uppercase tracking-wider text-ink transition-colors hover:bg-card"
+              href="/Thuspapha_Methakittipob_CV.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="button-system-dark rounded-full px-4 py-2 text-xs font-semibold uppercase tracking-wider"
             >
               Resume
             </a>
@@ -487,17 +489,17 @@ function HomePage() {
               warmth, clarity, and a strong sense of character.
             </p>
             <div className="mt-8 flex flex-wrap gap-3">
-              <a href="#work" className="rounded-full bg-pink px-7 py-3 text-xs font-bold uppercase tracking-wider text-card transition-transform hover:-translate-y-0.5">
+              <a href="#work" className="button-system rounded-full px-7 py-3 text-xs font-bold uppercase tracking-wider">
                 Explore my work
               </a>
-              <a href="mailto:thuspapha@gmail.com?subject=Resume%20request" className="rounded-full border border-pink px-7 py-3 text-xs font-bold uppercase tracking-wider text-pink transition-colors hover:bg-pink hover:text-card">
+              <a href="/Thuspapha_Methakittipob_CV.pdf" target="_blank" rel="noopener noreferrer" className="button-system rounded-full px-7 py-3 text-xs font-bold uppercase tracking-wider">
                 Resume
               </a>
             </div>
           </div>
         </div>
         <div className="border-y border-pink bg-sun px-5 py-2 text-center text-[11px] font-bold uppercase tracking-[0.2em] text-pink">
-          UX/UI Design&nbsp;&nbsp; ✦ &nbsp;&nbsp;Visual Identity&nbsp;&nbsp; ✦ &nbsp;&nbsp;Product &amp; Spatial Design
+          UX/UI Design&nbsp;&nbsp; ✦ &nbsp;&nbsp;Visual Identity&nbsp;&nbsp; ✦ &nbsp;&nbsp;Product Design
         </div>
       </section>
 
@@ -523,8 +525,8 @@ function HomePage() {
                   aria-pressed={filter === f}
                   className={
                     filter === f
-                      ? "rounded-full bg-sun px-4 py-2 text-sm font-semibold text-pink"
-                      : "rounded-full border border-ink/25 bg-card/35 px-4 py-2 text-sm font-medium text-ink/70 transition-colors hover:border-pink hover:text-pink"
+                      ? "button-system-selected rounded-full px-4 py-2 text-sm font-semibold"
+                      : "button-system rounded-full px-4 py-2 text-sm font-medium"
                   }
                 >
                   {f}
@@ -766,7 +768,7 @@ function HomePage() {
               <button
                 type="button"
                 onClick={() => setActive(null)}
-                className="absolute right-4 top-4 grid h-10 w-10 place-items-center rounded-full bg-card text-lg font-bold text-ink transition-colors hover:bg-pink hover:text-card"
+                className="button-system absolute right-4 top-4 grid h-10 w-10 place-items-center rounded-full text-lg font-bold"
                 aria-label="Close"
               >
                 ✕
@@ -1913,7 +1915,7 @@ function HomePage() {
                   <button
                     type="button"
                     onClick={() => setActive(previousProject)}
-                    className="rounded-[18px] border border-ink/15 bg-canvas px-5 py-4 text-left transition-colors hover:border-pink hover:bg-canvas-alt"
+                    className="button-system-panel rounded-[18px] px-5 py-4 text-left"
                   >
                     <span className="text-xs font-semibold uppercase tracking-[0.18em] text-pink">
                       ← Previous project
@@ -1927,7 +1929,7 @@ function HomePage() {
                   <button
                     type="button"
                     onClick={() => setActive(nextProject)}
-                    className="rounded-[18px] border border-ink/15 bg-canvas px-5 py-4 text-left transition-colors hover:border-pink hover:bg-canvas-alt sm:text-right"
+                    className="button-system-panel rounded-[18px] px-5 py-4 text-left sm:text-right"
                   >
                     <span className="text-xs font-semibold uppercase tracking-[0.18em] text-pink">
                       Next project →

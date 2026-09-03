@@ -218,6 +218,80 @@
   background-size: 42px 42px;
 }
 
+/* Shared interaction states for buttons and button-like links. */
+.button-system,
+.button-system-dark,
+.button-system-panel {
+  border: 1px solid color-mix(in oklab, var(--pink) 72%, transparent);
+  background: transparent;
+  color: var(--pink-deep);
+  transition:
+    background-color 0.2s ease,
+    border-color 0.2s ease,
+    color 0.2s ease,
+    transform 0.2s ease;
+}
+
+.button-system:hover,
+.button-system:focus-visible,
+.button-system-panel:hover,
+.button-system-panel:focus-visible {
+  border-color: var(--pink);
+  background: color-mix(in oklab, var(--pink) 12%, var(--card));
+  color: var(--pink-deep);
+}
+
+.button-system:active,
+.button-system-panel:active {
+  border-color: var(--pink);
+  background: var(--pink);
+  color: var(--card);
+  transform: translateY(1px);
+}
+
+.button-system-selected,
+.button-system[aria-pressed="true"] {
+  border: 1px solid var(--pink);
+  background: var(--pink);
+  color: var(--card);
+  transition:
+    background-color 0.2s ease,
+    border-color 0.2s ease,
+    color 0.2s ease;
+}
+
+.button-system-selected:hover,
+.button-system-selected:focus-visible,
+.button-system[aria-pressed="true"]:hover,
+.button-system[aria-pressed="true"]:focus-visible {
+  border-color: var(--pink-deep);
+  background: var(--pink-deep);
+}
+
+.button-system-dark {
+  border-color: color-mix(in oklab, var(--card) 70%, transparent);
+  color: var(--card);
+}
+
+.button-system-dark:hover,
+.button-system-dark:focus-visible {
+  border-color: var(--pink);
+  background: var(--pink);
+  color: var(--card);
+}
+
+.button-system-dark:active {
+  border-color: var(--sun);
+  background: var(--sun);
+  color: var(--ink);
+  transform: translateY(1px);
+}
+
+.button-system-panel {
+  border-color: color-mix(in oklab, var(--pink) 35%, transparent);
+  color: var(--ink);
+}
+
 /* Portfolio motion + motifs */
 @keyframes marquee-x {
   from { transform: translateX(0); }
