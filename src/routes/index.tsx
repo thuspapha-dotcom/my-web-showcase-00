@@ -35,10 +35,15 @@ import projectSaranthai from "../assets/project-saranthai.jpg";
 import projectSelfLove from "../assets/project-self-love.jpg";
 import projectOohJuicy from "../assets/project-ooh-juicy.jpg";
 import projectRockingLife from "../assets/project-rocking-life.jpg";
-import projectCircusSweet from "../assets/project-circus-sweet.jpg";
+import projectCircusSweet from "../assets/project-circus-sweet-cover.png";
+import circusSweetPoster from "../assets/circus-sweet-poster.png";
 import projectNewsphoter from "../assets/project-newsphoter.jpg";
-import projectNami from "../assets/project-nami.jpg";
+import projectNami from "../assets/project-nami-cover.png";
 import namiGalleryVase from "../assets/nami-gallery-vase.png";
+import namiGalleryRose from "../assets/nami-gallery-rose.png";
+import namiGalleryOrchid from "../assets/nami-gallery-orchid.png";
+import namiCompleteCollection from "../assets/nami-complete-collection.png";
+import namiInspirationReference from "../assets/nami-inspiration-reference.png";
 import projectLandmark from "../assets/project-landmark.jpg";
 import buddyCover from "../assets/buddy-card-cover.png";
 import buddyDesignDirection from "../assets/buddy-cover.jpg";
@@ -802,6 +807,54 @@ function HomePage() {
                   ))}
                 </div>
               </div>
+              {active.id === "circus-sweet" && (
+                <img
+                  src={circusSweetPoster}
+                  alt="Circus Sweet character design poster"
+                  width={1086}
+                  height={1448}
+                  loading="lazy"
+                  className="mt-3 w-full rounded-[18px] border border-ink/10 object-cover"
+                />
+              )}
+              {active.id === "nami" && (
+                <div className="space-y-8 pt-3">
+                  <section>
+                    <p className="flex items-center gap-2 text-sm font-semibold uppercase tracking-[0.25em] text-pink">
+                      <Sparkle className="h-4 w-4 shrink-0" />
+                      Design Inspiration
+                    </p>
+                    <p className="mt-3 leading-relaxed text-ink/70">
+                      This collection was inspired by a scene in which a wave surrounds and
+                      protects the heroine before she can sink or be swept away. Translating that
+                      moment into form, each Nami vase appears to embrace and safeguard what is
+                      most precious within it: the flower.
+                    </p>
+                    <img
+                      src={namiInspirationReference}
+                      alt="Water movement reference that inspired the first Nami prototype"
+                      width={1174}
+                      height={698}
+                      loading="lazy"
+                      className="mt-5 w-full rounded-[18px] border border-ink/10 object-cover"
+                    />
+                  </section>
+                  <section>
+                    <p className="flex items-center gap-2 text-sm font-semibold uppercase tracking-[0.25em] text-pink">
+                      <Sparkle className="h-4 w-4 shrink-0" />
+                      The Complete Nami Collection
+                    </p>
+                    <img
+                      src={namiCompleteCollection}
+                      alt="The complete Nami collection of transparent acrylic wave vases with flowers"
+                      width={1488}
+                      height={1057}
+                      loading="lazy"
+                      className="mt-5 w-full rounded-[18px] border border-ink/10 object-cover"
+                    />
+                  </section>
+                </div>
+              )}
               {(active.timeline || active.team) && (
                 <div className="grid gap-4 sm:grid-cols-[0.7fr_1.3fr]">
                   {active.timeline && (
@@ -828,14 +881,35 @@ function HomePage() {
                     <Sparkle className="h-4 w-4 shrink-0" />
                     Gallery
                   </p>
-                  <img
-                    src={namiGalleryVase}
-                    alt="Nami transparent acrylic vase holding an orange flower"
-                    width={1233}
-                    height={1643}
-                    loading="lazy"
-                    className="mt-5 w-full rounded-[18px] border border-ink/10 object-cover"
-                  />
+                    <p className="mt-3 text-sm text-ink/55">Swipe or scroll to explore the gallery →</p>
+                    <div className="mt-5 flex snap-x snap-mandatory gap-4 overflow-x-auto pb-4">
+                      {[
+                        {
+                          src: namiGalleryVase,
+                          alt: "Nami transparent acrylic vase holding an orange flower",
+                        },
+                        {
+                          src: namiGalleryRose,
+                          alt: "Nami transparent acrylic spiral vase holding a red rose",
+                        },
+                        {
+                          src: namiGalleryOrchid,
+                          alt: "Nami transparent acrylic wave vase holding red orchids",
+                        },
+                      ].map((image) => (
+                        <div
+                          key={image.src}
+                          className="aspect-[3/4] w-[78%] shrink-0 snap-start overflow-hidden rounded-[18px] border border-ink/10 sm:w-[46%]"
+                        >
+                          <img
+                            src={image.src}
+                            alt={image.alt}
+                            loading="lazy"
+                            className="h-full w-full object-cover"
+                          />
+                        </div>
+                      ))}
+                    </div>
                 </section>
               )}
               {active.problem && (
