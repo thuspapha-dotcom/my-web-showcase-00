@@ -29,6 +29,7 @@ import vrayLogo from "../assets/software-vray.png";
 import enscapeLogo from "../assets/software-enscape.png";
 import capcutLogo from "../assets/software-capcut.webp";
 import projectCuDormie from "../assets/project-cu-dormie.jpg";
+import cuDormieKbtgCertificate from "../assets/cu-dormie-kbtg-certificate.png";
 import projectPopFreshFood from "../assets/project-pop-fresh-food.jpg";
 import projectWeR from "../assets/project-we-r.jpg";
 import projectSaranthai from "../assets/project-saranthai.jpg";
@@ -1983,6 +1984,25 @@ function HomePage() {
                     className="w-full rounded-[18px] border border-ink/10 object-cover"
                   />
                 </div>
+              )}
+              {active.id === "kbtg" && (
+                <section className="pt-5">
+                  <p className="flex items-center gap-2 text-sm font-semibold uppercase tracking-[0.25em] text-pink">
+                    <Sparkle className="h-4 w-4 shrink-0" />
+                    Certificate
+                  </p>
+                  <p className="mt-3 leading-relaxed text-ink/70">
+                    Product UX/UI Design Program — KASIKORN Business-Technology Group
+                  </p>
+                  <img
+                    src={cuDormieKbtgCertificate}
+                    alt="KBTG Product UX/UI Design Program certificate awarded to Thuspapha Methakittipob"
+                    width={2105}
+                    height={1489}
+                    loading="lazy"
+                    className="mt-5 w-full rounded-[18px] border border-ink/10 object-cover"
+                  />
+                </section>
               )}
               <div className="mt-8 grid gap-3 border-t border-ink/10 pt-6 sm:grid-cols-2">
                 {previousProject ? (
