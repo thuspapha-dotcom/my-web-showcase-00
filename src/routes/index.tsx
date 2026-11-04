@@ -11,6 +11,7 @@ import saijaiSecondLife from "../assets/saijai-second-life.png";
 import saijaiArExperience from "../assets/saijai-ar-experience.png";
 import saijaiBrandingBoard from "../assets/saijai-branding-board.png";
 import saijaiGenZInsight from "../assets/saijai-gen-z-insight.png";
+import saijaiSustainabilityCertificate from "../assets/saijai-sustainability-certificate.png";
 import pKbtg from "../assets/p-kbtg.jpg";
 import pBrand from "../assets/p-brand.jpg";
 import pInterior from "../assets/p-interior.jpg";
@@ -30,6 +31,16 @@ import enscapeLogo from "../assets/software-enscape.png";
 import capcutLogo from "../assets/software-capcut.webp";
 import projectCuDormie from "../assets/project-cu-dormie.jpg";
 import cuDormieKbtgCertificate from "../assets/cu-dormie-kbtg-certificate.png";
+import cuDormiePersona from "../assets/cu-dormie-case-study/persona-sofa-visual.png";
+import cuDormieProblem from "../assets/cu-dormie-case-study/problem.jpg";
+import cuDormieDesignChallenge from "../assets/cu-dormie-case-study/design-challenge.png";
+import cuDormieSolutionOverview from "../assets/cu-dormie-case-study/solution-overview.jpg";
+import cuDormieSitemap from "../assets/cu-dormie-case-study/sitemap.jpg";
+import cuDormieCunexIntegration from "../assets/cu-dormie-case-study/cunex-integration.jpg";
+import cuDormieFlowFindRoom from "../assets/cu-dormie-case-study/flow-find-room.jpg";
+import cuDormieFlowFindRoommate from "../assets/cu-dormie-case-study/flow-find-roommate.jpg";
+import cuDormieFlowTransferContract from "../assets/cu-dormie-case-study/flow-transfer-contract.jpg";
+import cuDormiePrototypeTesting from "../assets/cu-dormie-case-study/prototype-testing.jpg";
 import projectPopFreshFood from "../assets/project-pop-fresh-food.jpg";
 import projectWeR from "../assets/project-we-r.jpg";
 import projectSaranthai from "../assets/project-saranthai.jpg";
@@ -392,6 +403,33 @@ function Pill({ children, tone = "pink" }: { children: React.ReactNode; tone?: "
   );
 }
 
+function ProjectImagePlaceholder({ label }: { label: string }) {
+  return (
+    <div className="mt-5 grid min-h-48 place-items-center rounded-[18px] border-2 border-dashed border-pink/30 bg-pink/5 px-6 text-center">
+      <div>
+        <Sparkle className="mx-auto h-5 w-5 text-pink" />
+        <p className="mt-3 text-xs font-semibold uppercase tracking-[0.18em] text-ink/45">
+          Image placeholder
+        </p>
+        <p className="mt-1 text-sm text-ink/60">{label}</p>
+      </div>
+    </div>
+  );
+}
+
+function ProjectCaseImage({ src, alt }: { src: string; alt: string }) {
+  return (
+    <img
+      src={src}
+      alt={alt}
+      width={2560}
+      height={960}
+      loading="lazy"
+      className="mt-5 w-full rounded-[18px] border border-ink/10 object-cover"
+    />
+  );
+}
+
 /* ---------------- page ---------------- */
 
 function HomePage() {
@@ -494,7 +532,14 @@ function HomePage() {
               I create thoughtful digital experiences, visual identities, and crafted objects with
               warmth, clarity, and a strong sense of character.
             </p>
-            <div className="mt-8 flex flex-wrap gap-3">
+            <div className="mt-6 inline-flex w-fit items-center gap-2.5 rounded-full border border-[#7ac5aa]/45 bg-white/65 px-4 py-2 text-xs font-semibold text-ink/75 shadow-sm backdrop-blur-sm">
+              <span className="relative flex h-2.5 w-2.5" aria-hidden="true">
+                <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-[#65b99a] opacity-45" />
+                <span className="relative inline-flex h-2.5 w-2.5 rounded-full bg-[#65b99a]" />
+              </span>
+              Available for: Freelance Projects &amp; Full-Time
+            </div>
+            <div className="mt-6 flex flex-wrap gap-3">
               <a href="#work" className="button-system rounded-full px-7 py-3 text-xs font-bold uppercase tracking-wider">
                 Explore my work
               </a>
@@ -1314,6 +1359,27 @@ function HomePage() {
                       </div>
                     </div>
                   </div>
+                  <div className="mt-10">
+                    <p className="flex items-center gap-2 text-sm font-semibold uppercase tracking-[0.25em] text-pink">
+                      <Sparkle className="h-4 w-4 shrink-0" />
+                      Certificate
+                    </p>
+                    <h4 className="mt-4 font-display text-2xl font-bold text-ink">
+                      Sustainable Customer Excellence for Packaging Industry
+                    </h4>
+                    <p className="mt-3 max-w-2xl text-sm leading-relaxed text-ink/70">
+                      Certificate of completion awarded by Chulalongkorn Business School,
+                      Chulalongkorn University · 19–20 October 2024.
+                    </p>
+                    <img
+                      src={saijaiSustainabilityCertificate}
+                      alt="Sustainable Customer Excellence for Packaging Industry certificate awarded to Thuspapha Methakittipob"
+                      width={1871}
+                      height={1323}
+                      loading="lazy"
+                      className="mt-5 w-full rounded-[18px] border border-ink/10 bg-white object-contain"
+                    />
+                  </div>
                 </div>
               )}
               {active.id === "brand" && (
@@ -1986,23 +2052,237 @@ function HomePage() {
                 </div>
               )}
               {active.id === "kbtg" && (
-                <section className="pt-5">
-                  <p className="flex items-center gap-2 text-sm font-semibold uppercase tracking-[0.25em] text-pink">
-                    <Sparkle className="h-4 w-4 shrink-0" />
-                    Certificate
-                  </p>
-                  <p className="mt-3 leading-relaxed text-ink/70">
-                    Product UX/UI Design Program — KASIKORN Business-Technology Group
-                  </p>
-                  <img
-                    src={cuDormieKbtgCertificate}
-                    alt="KBTG Product UX/UI Design Program certificate awarded to Thuspapha Methakittipob"
-                    width={2105}
-                    height={1489}
-                    loading="lazy"
-                    className="mt-5 w-full rounded-[18px] border border-ink/10 object-cover"
-                  />
-                </section>
+                <div className="space-y-10 pt-5">
+                  <section>
+                    <p className="flex items-center gap-2 text-sm font-semibold uppercase tracking-[0.25em] text-pink"><Sparkle className="h-4 w-4 shrink-0" />The Problem</p>
+                    <h4 className="mt-4 font-display text-2xl font-bold text-ink">Finding student housing should not feel this uncertain</h4>
+                    <p className="mt-3 leading-relaxed text-ink/70">Chulalongkorn University students struggle to find suitable rooms because listings are difficult to search, information is often outdated, agents may feel unreliable, and finding a compatible roommate depends largely on chance.</p>
+                    <ProjectCaseImage src={cuDormieProblem} alt="CU Dormie student-housing pain points from the original presentation" />
+                  </section>
+
+                  <section>
+                    <p className="flex items-center gap-2 text-sm font-semibold uppercase tracking-[0.25em] text-pink"><Sparkle className="h-4 w-4 shrink-0" />Persona</p>
+                    <div className="mt-4 overflow-hidden rounded-[24px] border border-ink/10 bg-card">
+                      <img
+                        src={cuDormiePersona}
+                        alt="Sofa comparing trusted room listings and roommate lifestyles"
+                        width={1672}
+                        height={941}
+                        loading="lazy"
+                        className="aspect-video w-full object-cover"
+                      />
+                      <div className="grid gap-5 p-6 sm:grid-cols-[0.8fr_1.2fr] sm:p-8">
+                        <div>
+                          <p className="text-xs font-semibold uppercase tracking-[0.22em] text-pink">Meet Sofa</p>
+                          <h4 className="mt-2 font-display text-3xl font-bold text-ink">A careful planner looking for a place that feels right.</h4>
+                        </div>
+                        <div className="grid gap-3 sm:grid-cols-3">
+                          {[
+                            ["⌂", "Needs", "A safe room near campus"],
+                            ["✓", "Trusts", "Verified, current details"],
+                            ["♡", "Values", "A compatible roommate"],
+                          ].map(([icon, label, text]) => (
+                            <article key={label} className="rounded-[16px] bg-soft-blue/55 p-4">
+                              <span className="grid h-9 w-9 place-items-center rounded-full bg-card text-lg text-pink shadow-sm">{icon}</span>
+                              <p className="mt-3 text-[11px] font-semibold uppercase tracking-[0.18em] text-pink">{label}</p>
+                              <p className="mt-1 text-sm font-semibold leading-snug text-ink/80">{text}</p>
+                            </article>
+                          ))}
+                        </div>
+                      </div>
+                    </div>
+                  </section>
+
+                  <section>
+                    <p className="flex items-center gap-2 text-sm font-semibold uppercase tracking-[0.25em] text-pink"><Sparkle className="h-4 w-4 shrink-0" />Research Insights</p>
+                    <h4 className="mt-4 max-w-3xl font-display text-2xl font-bold leading-snug text-ink sm:text-3xl">
+                      Students don’t just need more listings — they need a housing journey they can trust.
+                    </h4>
+                    <div className="mt-6 grid gap-4 lg:grid-cols-3">
+                      {[
+                        ["01", "Trust before choice", "Students need verified identities and current room details before they feel ready to act.", "Verified CU NEX identities"],
+                        ["02", "Compatibility beyond budget", "Daily habits matter as much as price and location when choosing someone to live with.", "Lifestyle-based matching"],
+                        ["03", "One connected journey", "Search, viewing, contracts, and payments feel harder when they happen across different platforms.", "Integrated housing management"],
+                      ].map(([number, title, insight, response]) => (
+                        <article key={title} className="flex h-full flex-col rounded-[20px] border border-ink/10 bg-soft-blue/45 p-5 sm:p-6">
+                          <span className="grid h-10 w-10 place-items-center rounded-full bg-pink font-display text-sm font-bold text-white">{number}</span>
+                          <h5 className="mt-5 font-display text-xl font-bold text-ink">{title}</h5>
+                          <p className="mt-2 text-sm leading-relaxed text-ink/70">{insight}</p>
+                          <div className="mt-5 border-t border-ink/10 pt-4">
+                            <p className="text-[10px] font-semibold uppercase tracking-[0.2em] text-pink">Design response</p>
+                            <p className="mt-1 text-sm font-semibold text-ink/80">{response}</p>
+                          </div>
+                        </article>
+                      ))}
+                    </div>
+                    <div className="mt-5 rounded-[20px] border border-ink/10 bg-card p-5 sm:p-6">
+                      <p className="text-xs font-semibold uppercase tracking-[0.22em] text-pink">The housing journey</p>
+                      <div className="mt-5 grid grid-cols-2 gap-3 sm:grid-cols-3 lg:grid-cols-6">
+                        {[
+                          ["⌕", "Search", "Outdated listings"],
+                          ["✓", "Verify", "Unclear contacts"],
+                          ["⌂", "Visit", "Scattered booking"],
+                          ["♡", "Match", "Lifestyle uncertainty"],
+                          ["✎", "Sign", "Complex contracts"],
+                          ["฿", "Pay", "Separate records"],
+                        ].map(([icon, step, friction], index) => (
+                          <div key={step} className="relative rounded-[16px] bg-canvas-alt/60 p-4">
+                            <span className="text-xl text-pink">{icon}</span>
+                            <p className="mt-2 font-display text-base font-bold text-ink">{step}</p>
+                            <p className="mt-1 text-xs leading-snug text-ink/55">{friction}</p>
+                            {index < 5 && <span aria-hidden="true" className="absolute -right-2 top-1/2 z-10 hidden -translate-y-1/2 text-pink/45 lg:block">→</span>}
+                          </div>
+                        ))}
+                      </div>
+                      <div className="mt-5 rounded-[14px] bg-pink/8 px-4 py-3 text-sm font-semibold text-ink/75">
+                        Research shaped CU Dormie into one verified path from discovery to move-in.
+                      </div>
+                    </div>
+                  </section>
+
+                  <section className="rounded-[20px] border border-pink/25 bg-pink/8 p-6">
+                    <p className="text-sm font-semibold uppercase tracking-[0.25em] text-pink">Design Challenge</p>
+                    <h4 className="mt-4 font-display text-2xl font-bold leading-snug text-ink">How might we help students find a room, manage a contract, and connect with a compatible roommate through one smooth and trustworthy experience?</h4>
+                    <ProjectCaseImage src={cuDormieDesignChallenge} alt="CU Dormie experience-design requirements for finding rooms and roommates" />
+                  </section>
+
+                  <section>
+                    <p className="flex items-center gap-2 text-sm font-semibold uppercase tracking-[0.25em] text-pink"><Sparkle className="h-4 w-4 shrink-0" />Solution Overview</p>
+                    <h4 className="mt-4 font-display text-2xl font-bold text-ink">One connected housing journey inside CU NEX</h4>
+                    <div className="mt-5 grid gap-3 sm:grid-cols-2">
+                      {["Personalised room search", "Lifestyle-based roommate matching", "Room-contract transfer", "Room-viewing appointments", "Contract records and payments", "Verified CU NEX identities"].map((feature, index) => (
+                        <div key={feature} className="flex items-center gap-4 rounded-[16px] border border-ink/10 px-4 py-3"><span className="grid h-8 w-8 shrink-0 place-items-center rounded-full bg-sun text-sm font-bold text-pink">{index + 1}</span><span className="text-sm font-semibold text-ink/80">{feature}</span></div>
+                      ))}
+                    </div>
+                    <ProjectCaseImage src={cuDormieSolutionOverview} alt="CU Dormie personalised room-search screens" />
+                  </section>
+
+                  <section>
+                    <p className="flex items-center gap-2 text-sm font-semibold uppercase tracking-[0.25em] text-pink"><Sparkle className="h-4 w-4 shrink-0" />Connected to CU NEX</p>
+                    <p className="mt-3 leading-relaxed text-ink/70">Integrating CU Dormie with CU NEX anchors the service in an ecosystem students already use. University-verified identities improve trust, clarify the target community, and create a safer foundation for housing and roommate decisions.</p>
+                    <ProjectCaseImage src={cuDormieCunexIntegration} alt="CU Dormie entry point integrated into the CU NEX application" />
+                  </section>
+
+                  <section>
+                    <p className="flex items-center gap-2 text-sm font-semibold uppercase tracking-[0.25em] text-pink"><Sparkle className="h-4 w-4 shrink-0" />Information Architecture</p>
+                    <p className="mt-3 leading-relaxed text-ink/70">The sitemap groups the experience around the tasks students need most: finding a room, finding a roommate, transferring a contract, managing appointments, and reviewing contracts and payments. Secondary branches are intentionally reduced so the main paths remain easy to scan.</p>
+                    <ProjectCaseImage src={cuDormieSitemap} alt="CU Dormie sitemap covering room search, roommate matching, contract transfer, and profile features" />
+                  </section>
+
+                  <section>
+                    <p className="flex items-center gap-2 text-sm font-semibold uppercase tracking-[0.25em] text-pink"><Sparkle className="h-4 w-4 shrink-0" />Key User Flows</p>
+                    <div
+                      className="hidden"
+                      style={{
+                        backgroundColor: "#eafaf3",
+                        backgroundImage: "radial-gradient(circle at 83% 13%, rgba(255,210,102,.6) 0 3%, transparent 3.3%), radial-gradient(circle at 10% 92%, rgba(255,164,196,.42) 0 15%, transparent 15.5%), radial-gradient(circle at 95% 82%, rgba(126,232,174,.38) 0 18%, transparent 18.5%), linear-gradient(125deg,#e5fbf0 0%,#eef7ff 50%,#fff0f5 100%)",
+                      }}
+                    >
+                      <span aria-hidden="true" className="absolute right-[7%] top-[9%] rotate-12 text-4xl text-[#83c7eb]/70">✦</span>
+                      <span aria-hidden="true" className="absolute left-[28%] top-[3%] -rotate-12 text-3xl text-[#f3a8c0]/70">⌁</span>
+                      <span aria-hidden="true" className="absolute bottom-[6%] right-[3%] text-5xl text-[#f19bb9]/50">❀</span>
+
+                      <div className="relative z-10 flex items-end justify-between gap-4 px-2 pb-6">
+                        <div>
+                          <p className="text-xs font-semibold italic tracking-[0.12em] text-[#4f85bd]">CU Dormie · Moving Journey</p>
+                          <h4 className="mt-1 font-display text-3xl font-bold text-[#376b9d] sm:text-4xl">Find your way home</h4>
+                          <p className="mt-2 max-w-xl text-sm leading-relaxed text-ink/60">A playful visual story of the three tasks students need most—from finding a room to finding the right person to share it with.</p>
+                        </div>
+                        <span className="hidden -rotate-2 rounded-full border border-white/70 bg-white/60 px-4 py-2 text-xs font-bold text-[#4f85bd] shadow-sm backdrop-blur-sm sm:inline-flex">Swipe the film →</span>
+                      </div>
+
+                      <div className="relative z-10 pt-4 md:pl-24">
+                        <div aria-hidden="true" className="absolute bottom-5 left-0 top-0 z-20 hidden w-28 md:block">
+                          <div className="absolute left-1 top-1/2 h-44 w-24 -translate-y-1/2 rounded-[46%_46%_25%_25%] border-2 border-[#4f85bd]/50 bg-gradient-to-r from-[#82b9d8] via-[#c7f1e3] to-[#6aa5c9] shadow-[0_16px_28px_rgba(65,126,172,.2)]">
+                            <div className="absolute -top-4 left-1/2 h-8 w-20 -translate-x-1/2 rounded-[50%] border-2 border-[#4f85bd]/45 bg-[#bfe8dc]" />
+                            <div className="absolute left-1/2 top-12 -translate-x-1/2 -rotate-90 whitespace-nowrap font-display text-lg font-bold tracking-[0.18em] text-[#376b9d]">CU DORMIE</div>
+                            <div className="absolute bottom-5 left-1/2 -translate-x-1/2 whitespace-nowrap text-[9px] font-semibold uppercase tracking-[0.16em] text-white/90">App journey film</div>
+                          </div>
+                          <span className="absolute left-20 top-4 rotate-[25deg] text-4xl text-[#f7d65b]">✦</span>
+                        </div>
+
+                      <div className="relative -rotate-[0.4deg] rounded-[22px] bg-[#619bd0] px-3 py-10 shadow-[0_18px_45px_rgba(63,118,170,0.22)] sm:px-5">
+                        <div
+                          aria-hidden="true"
+                          className="absolute inset-x-0 top-2 h-4 opacity-90"
+                          style={{ backgroundImage: "repeating-linear-gradient(90deg, transparent 0 12px, rgba(235,250,246,.95) 12px 34px, transparent 34px 46px)" }}
+                        />
+                        <div
+                          aria-hidden="true"
+                          className="absolute inset-x-0 bottom-2 h-4 opacity-90"
+                          style={{ backgroundImage: "repeating-linear-gradient(90deg, transparent 0 12px, rgba(235,250,246,.95) 12px 34px, transparent 34px 46px)" }}
+                        />
+
+                        <div className="flex snap-x snap-mandatory gap-4 overflow-x-auto pb-2 [scrollbar-width:thin] [scrollbar-color:rgba(255,255,255,.8)_transparent]">
+                          {[
+                            ["01", "Find a room", "Set preferences, compare trusted listings, and schedule a viewing.", cuDormieFlowFindRoom, "CU Dormie room-search task flow and payment-completion screen", "from-[#fff3a9] to-[#fffbea]"],
+                            ["02", "Find a roommate", "Compare lifestyles and connect through a safer student network.", cuDormieFlowFindRoommate, "CU Dormie roommate-matching task flow and successful match screen", "from-[#ffd4e3] to-[#fff0f6]"],
+                            ["03", "Transfer a contract", "Publish details and keep the room handover transparent.", cuDormieFlowTransferContract, "CU Dormie room-contract transfer task flow and viewing confirmation screen", "from-[#c9f3df] to-[#effcf7]"],
+                          ].map(([number, title, text, image, alt, color]) => (
+                            <article key={title} className={`relative min-w-[84%] snap-center overflow-hidden rounded-[18px] bg-gradient-to-br ${color} p-3 shadow-sm sm:min-w-[68%] lg:min-w-[48%]`}>
+                              <span aria-hidden="true" className="absolute -right-6 -top-7 h-20 w-20 rounded-full border-[12px] border-white/30" />
+                              <span aria-hidden="true" className="absolute right-16 top-3 rotate-12 text-2xl text-[#74b9aa]/45">❋</span>
+                              <div className="flex items-start justify-between gap-3 px-2 pb-3 pt-1">
+                                <div>
+                                  <p className="text-[10px] font-bold uppercase tracking-[0.2em] text-[#4f85bd]">Flow {number}</p>
+                                  <h5 className="mt-1 font-display text-xl font-bold text-ink">{title}</h5>
+                                  <p className="mt-1 max-w-md text-xs leading-relaxed text-ink/65 sm:text-sm">{text}</p>
+                                </div>
+                                <span className="grid h-9 w-9 shrink-0 place-items-center rounded-full bg-white/75 text-lg text-pink">✦</span>
+                              </div>
+                              <img src={image} alt={alt} loading="lazy" className="aspect-[16/10] w-full rounded-[14px] border border-white/80 object-cover" />
+                            </article>
+                          ))}
+                        </div>
+                      </div>
+                      </div>
+
+                      <div className="relative z-10 mt-5 flex items-center justify-between gap-4 px-2">
+                        <p className="text-xs italic leading-relaxed text-[#4f85bd] sm:text-sm">Each frame captures a moment in the journey—from uncertainty to a confident decision.</p>
+                        <span aria-hidden="true" className="hidden text-2xl text-[#f4a9bd] sm:block">〰︎ ❀ 〰︎</span>
+                      </div>
+                    </div>
+                    <div className="mt-5 space-y-6">
+                      {[
+                        ["1. Find a room", "Set preferences, compare suitable listings, review trusted details, and schedule a viewing.", cuDormieFlowFindRoom, "CU Dormie room-search task flow and payment-completion screen"],
+                        ["2. Find a roommate", "Answer lifestyle questions, review compatibility, and connect through a safer student network.", cuDormieFlowFindRoommate, "CU Dormie roommate-matching task flow and successful match screen"],
+                        ["3. Transfer a contract", "Publish contract details, find an eligible student, and keep the handover process transparent.", cuDormieFlowTransferContract, "CU Dormie room-contract transfer task flow and viewing confirmation screen"],
+                      ].map(([title, text, image, alt]) => (
+                        <article key={title}>
+                          <h4 className="font-display text-xl font-bold text-ink">{title}</h4>
+                          <p className="mt-2 text-sm leading-relaxed text-ink/70">{text}</p>
+                          <ProjectCaseImage src={image} alt={alt} />
+                        </article>
+                      ))}
+                    </div>
+                  </section>
+
+                  <section>
+                    <p className="flex items-center gap-2 text-sm font-semibold uppercase tracking-[0.25em] text-pink"><Sparkle className="h-4 w-4 shrink-0" />Prototype Testing</p>
+                    <div className="mt-5 rounded-[18px] border border-ink/10 bg-soft-blue/45 p-5">
+                      <ul className="space-y-3 text-sm leading-relaxed text-ink/75">
+                        <li>• Users understood the room-search process relatively easily.</li>
+                        <li>• Lifestyle-based roommate matching felt relevant and engaging.</li>
+                        <li>• Some buttons and labels still caused hesitation.</li>
+                        <li>• Several screens presented too much information at once.</li>
+                        <li>• Advertising should be less prominent, while primary calls to action need stronger hierarchy.</li>
+                      </ul>
+                    </div>
+                    <ProjectCaseImage src={cuDormiePrototypeTesting} alt="CU Dormie prototype-testing feedback from a first-year architecture student" />
+                  </section>
+
+                  <section className="rounded-[20px] border border-ink/10 bg-card p-6">
+                    <p className="text-sm font-semibold uppercase tracking-[0.25em] text-pink">Next Steps</p>
+                    <p className="mt-4 leading-relaxed text-ink/70">Refine labels and microcopy, simplify the information hierarchy, strengthen primary calls to action, reduce the visual weight of advertising, and conduct another round of usability testing with Chulalongkorn University students.</p>
+                    <ProjectImagePlaceholder label="Final UI or project conclusion image" />
+                  </section>
+
+                  <section>
+                    <p className="flex items-center gap-2 text-sm font-semibold uppercase tracking-[0.25em] text-pink"><Sparkle className="h-4 w-4 shrink-0" />Certificate</p>
+                    <p className="mt-3 leading-relaxed text-ink/70">Product UX/UI Design Program — KASIKORN Business-Technology Group</p>
+                    <img src={cuDormieKbtgCertificate} alt="KBTG Product UX/UI Design Program certificate awarded to Thuspapha Methakittipob" width={2105} height={1489} loading="lazy" className="mt-5 w-full rounded-[18px] border border-ink/10 object-cover" />
+                  </section>
+                </div>
               )}
               <div className="mt-8 grid gap-3 border-t border-ink/10 pt-6 sm:grid-cols-2">
                 {previousProject ? (

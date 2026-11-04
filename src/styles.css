@@ -218,6 +218,263 @@
   background-size: 42px 42px;
 }
 
+/* Whole-site spring illustration language inspired by airy editorial posters. */
+.spring-fantasy {
+  overflow-x: clip;
+  background:
+    radial-gradient(circle at 12% 8%, color-mix(in oklab, var(--sun) 32%, transparent), transparent 18rem),
+    radial-gradient(circle at 92% 22%, color-mix(in oklab, var(--pink) 18%, transparent), transparent 22rem),
+    var(--canvas);
+}
+
+.spring-nav {
+  box-shadow: 0 8px 30px color-mix(in oklab, var(--soft-blue) 35%, transparent);
+}
+
+.spring-hero {
+  position: relative;
+  overflow: hidden;
+  background:
+    radial-gradient(ellipse at 6% 84%, color-mix(in oklab, var(--pink) 28%, transparent) 0 18%, transparent 18.5%),
+    radial-gradient(ellipse at 86% 18%, color-mix(in oklab, var(--sun) 48%, transparent) 0 9%, transparent 9.5%),
+    radial-gradient(ellipse at 100% 100%, color-mix(in oklab, var(--soft-blue) 75%, transparent) 0 24%, transparent 24.5%),
+    linear-gradient(135deg, oklch(0.975 0.03 166), oklch(0.98 0.025 220) 48%, oklch(0.975 0.035 345));
+}
+
+.spring-hero::before,
+.spring-hero::after,
+.spring-section::before,
+.spring-section::after {
+  content: "";
+  position: absolute;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.spring-hero::before {
+  width: 9rem;
+  height: 12rem;
+  right: 5%;
+  top: 10%;
+  opacity: .42;
+  border-radius: 80% 20% 70% 30%;
+  background: linear-gradient(145deg, var(--sun), var(--pink));
+  filter: blur(.2px);
+  transform: rotate(22deg);
+}
+
+.spring-hero::after {
+  width: 5rem;
+  height: 5rem;
+  right: 17%;
+  top: 8%;
+  border: 1rem solid color-mix(in oklab, var(--soft-blue) 70%, transparent);
+  border-radius: 58% 42% 64% 36%;
+  transform: rotate(-18deg);
+}
+
+.spring-section {
+  position: relative;
+  isolation: isolate;
+}
+
+.spring-section > * {
+  position: relative;
+  z-index: 1;
+}
+
+.spring-about {
+  background:
+    radial-gradient(circle at 94% 9%, color-mix(in oklab, var(--sun) 46%, transparent) 0 8%, transparent 8.5%),
+    radial-gradient(circle at 8% 82%, color-mix(in oklab, var(--pink) 18%, transparent) 0 15%, transparent 15.5%),
+    linear-gradient(145deg, oklch(0.98 0.02 170), oklch(0.975 0.025 222));
+}
+
+.spring-section::before {
+  width: 7rem;
+  height: 7rem;
+  left: -2rem;
+  top: 18%;
+  opacity: .22;
+  border-radius: 65% 35% 74% 26%;
+  background: var(--pink);
+  transform: rotate(28deg);
+}
+
+.spring-section::after {
+  width: 8rem;
+  height: 3rem;
+  right: -2rem;
+  bottom: 8%;
+  opacity: .3;
+  border-radius: 100%;
+  background: var(--sun);
+  transform: rotate(-12deg);
+}
+
+.illus-card {
+  position: relative;
+  isolation: isolate;
+  box-shadow: 0 18px 45px color-mix(in oklab, var(--soft-blue) 42%, transparent);
+}
+
+.illus-card::after {
+  content: "✦";
+  position: absolute;
+  right: .8rem;
+  top: .65rem;
+  z-index: 2;
+  display: grid;
+  width: 2.1rem;
+  height: 2.1rem;
+  place-items: center;
+  border-radius: 999px;
+  background: color-mix(in oklab, var(--sun) 80%, white);
+  color: var(--pink-deep);
+  box-shadow: 0 5px 14px color-mix(in oklab, var(--ink) 10%, transparent);
+}
+
+.illus-card:nth-child(3n + 2)::after {
+  content: "❀";
+  background: color-mix(in oklab, var(--pink) 22%, white);
+}
+
+.illus-card:nth-child(3n)::after {
+  content: "⌁";
+  background: color-mix(in oklab, var(--soft-blue) 75%, white);
+}
+
+.illus-frame {
+  box-shadow:
+    -18px 18px 0 color-mix(in oklab, var(--soft-blue) 78%, white),
+    12px -12px 0 color-mix(in oklab, var(--sun) 68%, white),
+    0 24px 50px color-mix(in oklab, var(--ink) 12%, transparent);
+  transform: rotate(-1.2deg);
+}
+
+.illus-frame::before,
+.illus-frame::after {
+  position: absolute;
+  z-index: 3;
+  display: grid;
+  place-items: center;
+  border-radius: 999px;
+  pointer-events: none;
+}
+
+.illus-frame::before {
+  content: "❀";
+  width: 3.6rem;
+  height: 3.6rem;
+  left: -.4rem;
+  top: -.4rem;
+  background: color-mix(in oklab, var(--pink) 25%, white);
+  color: var(--pink-deep);
+  font-size: 1.6rem;
+}
+
+.illus-frame::after {
+  content: "✦";
+  width: 2.7rem;
+  height: 2.7rem;
+  right: .5rem;
+  top: .5rem;
+  background: color-mix(in oklab, var(--sun) 78%, white);
+  color: var(--ink);
+  font-size: 1.2rem;
+}
+
+.illus-process-card {
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 14px 34px color-mix(in oklab, var(--soft-blue) 38%, transparent);
+}
+
+.illus-process-card::after {
+  content: "";
+  position: absolute;
+  width: 4rem;
+  height: 4rem;
+  right: -1.25rem;
+  bottom: -1.5rem;
+  border: .75rem solid color-mix(in oklab, var(--pink) 18%, transparent);
+  border-radius: 56% 44% 62% 38%;
+  transform: rotate(18deg);
+}
+
+.illus-process-card:nth-child(2) {
+  background: linear-gradient(145deg, color-mix(in oklab, var(--sun) 18%, white), white);
+  transform: translateY(.7rem);
+}
+
+.illus-process-card:nth-child(3) {
+  background: linear-gradient(145deg, color-mix(in oklab, var(--soft-blue) 45%, white), white);
+}
+
+.illus-paper {
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 20px 46px color-mix(in oklab, var(--soft-blue) 35%, transparent);
+}
+
+.illus-paper::before {
+  content: "✦  ❀  ⌁";
+  position: absolute;
+  right: 1.25rem;
+  top: .9rem;
+  color: color-mix(in oklab, var(--pink) 55%, transparent);
+  letter-spacing: .35rem;
+  transform: rotate(5deg);
+}
+
+.spring-modal {
+  background:
+    radial-gradient(circle at 94% 6%, color-mix(in oklab, var(--sun) 42%, transparent) 0 7%, transparent 7.5%),
+    radial-gradient(circle at 5% 35%, color-mix(in oklab, var(--pink) 14%, transparent) 0 9%, transparent 9.5%),
+    linear-gradient(150deg, oklch(0.99 0.012 165), oklch(0.98 0.018 220) 48%, oklch(0.985 0.018 345));
+  box-shadow: 0 28px 90px color-mix(in oklab, var(--ink) 28%, transparent);
+}
+
+.spring-modal > div:first-child {
+  margin: .75rem;
+  overflow: hidden;
+  border-radius: 1.35rem;
+  border: 1px solid color-mix(in oklab, white 80%, transparent);
+  box-shadow: 0 14px 36px color-mix(in oklab, var(--soft-blue) 38%, transparent);
+}
+
+.spring-modal section {
+  position: relative;
+  border-radius: 1.25rem;
+  padding: 1.15rem;
+  background: color-mix(in oklab, white 72%, transparent);
+  border: 1px solid color-mix(in oklab, var(--soft-blue) 38%, transparent);
+}
+
+.spring-modal section:nth-of-type(3n + 2) {
+  background: color-mix(in oklab, var(--canvas-alt) 45%, white);
+}
+
+.spring-modal section:nth-of-type(3n) {
+  background: color-mix(in oklab, var(--soft-blue) 45%, white);
+}
+
+.spring-modal img {
+  box-shadow: 0 12px 30px color-mix(in oklab, var(--ink) 10%, transparent);
+}
+
+@media (max-width: 639px) {
+  .illus-frame {
+    box-shadow:
+      -8px 10px 0 color-mix(in oklab, var(--soft-blue) 70%, white),
+      7px -7px 0 color-mix(in oklab, var(--sun) 60%, white);
+  }
+
+  .spring-modal section {
+    padding: .9rem;
+  }
+}
+
 /* Shared interaction states for buttons and button-like links. */
 .button-system,
 .button-system-dark,
