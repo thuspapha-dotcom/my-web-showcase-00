@@ -45,6 +45,7 @@ import projectPopFreshFood from "../assets/project-pop-fresh-food.jpg";
 import projectWeR from "../assets/project-we-r.jpg";
 import projectSaranthai from "../assets/project-saranthai.jpg";
 import projectSelfLove from "../assets/project-self-love-new.png";
+import selfLoveManicureArea from "../assets/self-love-manicure-area.png";
 import projectOohJuicy from "../assets/project-ooh-juicy.jpg";
 import rockingLifeConceptPoster from "../assets/rocking-life-concept-poster.png";
 import rockingLifeDetailCloseup from "../assets/rocking-life-detail-closeup.png";
@@ -439,7 +440,7 @@ function ProjectCaseImage({ src, alt }: { src: string; alt: string }) {
 
 /* ---------------- page ---------------- */
 
-function HomePage() {
+export function HomePage() {
   const [filter, setFilter] = useState<(typeof FILTERS)[number]>("All");
   const [active, setActive] = useState<Project | null>(null);
 
@@ -860,6 +861,25 @@ function HomePage() {
                   ))}
                 </div>
               </div>
+              {active.id === "self-love" && (
+                <section className="pt-3">
+                  <p className="flex items-center gap-2 text-sm font-semibold uppercase tracking-[0.25em] text-pink">
+                    <Sparkle className="h-4 w-4 shrink-0" />
+                    Interior Detail
+                  </p>
+                  <h4 className="mt-4 font-display text-2xl font-bold text-ink">
+                    Manicure area
+                  </h4>
+                  <img
+                    src={selfLoveManicureArea}
+                    alt="Self Love nail salon manicure area with Memphis-inspired colours and curved forms"
+                    width={1536}
+                    height={1024}
+                    loading="lazy"
+                    className="mt-5 w-full rounded-[18px] border border-ink/10 object-cover"
+                  />
+                </section>
+              )}
               {active.id === "rocking-life" && (
                 <div className="space-y-10 pt-3">
                   <section>
