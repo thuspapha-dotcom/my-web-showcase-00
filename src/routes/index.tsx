@@ -45,6 +45,7 @@ import projectPopFreshFood from "../assets/project-pop-fresh-food.jpg";
 import projectWeR from "../assets/project-we-r.jpg";
 import projectSaranthai from "../assets/project-saranthai.jpg";
 import saranthaiDiningLounge from "../assets/saranthai-dining-lounge.jpg";
+import saranthaiDiningLoungeSeating from "../assets/saranthai-dining-lounge-seating.png";
 import projectSelfLove from "../assets/project-self-love-new.png";
 import selfLoveManicureArea from "../assets/self-love-manicure-area.png";
 import projectOohJuicy from "../assets/project-ooh-juicy.jpg";
@@ -897,6 +898,14 @@ export function HomePage() {
                     height={941}
                     loading="lazy"
                     className="mt-5 w-full rounded-[18px] border border-ink/10 object-cover"
+                  />
+                  <img
+                    src={saranthaiDiningLoungeSeating}
+                    alt="Saranthai cultural dining lounge seating beside panoramic train windows"
+                    width={1344}
+                    height={964}
+                    loading="lazy"
+                    className="mt-4 w-full rounded-[18px] border border-ink/10 object-cover"
                   />
                 </section>
               )}
