@@ -44,9 +44,14 @@ import cuDormiePrototypeTesting from "../assets/cu-dormie-case-study/prototype-t
 import projectPopFreshFood from "../assets/project-pop-fresh-food.jpg";
 import projectWeR from "../assets/project-we-r.jpg";
 import projectSaranthai from "../assets/project-saranthai.jpg";
-import projectSelfLove from "../assets/project-self-love.jpg";
+import projectSelfLove from "../assets/project-self-love-new.png";
 import projectOohJuicy from "../assets/project-ooh-juicy.jpg";
-import projectRockingLife from "../assets/project-rocking-life.jpg";
+import rockingLifeConceptPoster from "../assets/rocking-life-concept-poster.png";
+import rockingLifeDetailCloseup from "../assets/rocking-life-detail-closeup.png";
+import rockingLifeFlowerMeaning from "../assets/rocking-life-flower-meaning.png";
+import rockingLifeProductVisual from "../assets/rocking-life-product-visual.png";
+import rockingLifeRockingView from "../assets/rocking-life-rocking-view.png";
+import rockingLifeWorkCard from "../assets/rocking-life-work-card.png";
 import projectCircusSweet from "../assets/project-circus-sweet-cover.png";
 import circusSweetPoster from "../assets/circus-sweet-poster.png";
 import projectNewsphoter from "../assets/project-newsphoter.jpg";
@@ -132,6 +137,7 @@ type Project = {
   role: string;
   tools: string[];
   image: string;
+  cardImage?: string;
   award?: string;
   awardDetail?: string;
   timeline?: string;
@@ -256,7 +262,8 @@ const PROJECTS: Project[] = [
       "Inspired by the Kaew Jao Jom flower, Rocking Life represents a life that refuses to give up. Its unconventional form combines falling and balance, using a spherical steel counterweight to create a vase that can tip dynamically while remaining stable.",
     role: "Research | Concept design | Experiment | Prototype test | Product design | 3D modeling & rendering",
     tools: ["Illustrator", "Rhinoceros"],
-    image: projectRockingLife,
+    image: rockingLifeWorkCard,
+    cardImage: rockingLifeWorkCard,
   },
   {
     id: "circus-sweet",
@@ -600,7 +607,7 @@ function HomePage() {
                 >
                   <div className="relative">
                     <img
-                      src={p.image}
+                      src={p.cardImage ?? p.image}
                       alt={p.title}
                       loading="lazy"
                       width={1280}
@@ -853,6 +860,180 @@ function HomePage() {
                   ))}
                 </div>
               </div>
+              {active.id === "rocking-life" && (
+                <div className="space-y-10 pt-3">
+                  <section>
+                    <p className="flex items-center gap-2 text-sm font-semibold uppercase tracking-[0.25em] text-pink">
+                      <Sparkle className="h-4 w-4 shrink-0" />
+                      Inspiration
+                    </p>
+                    <h4 className="mt-4 font-display text-2xl font-bold text-ink">
+                      The flower of life
+                    </h4>
+                    <img
+                      src={rockingLifeFlowerMeaning}
+                      alt="Kaew Jao Jom flower interpreted as a symbol of strength, resilience, and enduring life"
+                      width={1671}
+                      height={941}
+                      loading="lazy"
+                      className="mt-5 w-full rounded-[18px] border border-ink/10 object-cover"
+                    />
+                    <p className="mt-3 leading-relaxed text-ink/70">
+                      The project begins with an interpretation of the Kaew Jao Jom flower and its
+                      relationship to life. Rather than borrowing only its appearance, the design
+                      translates the flower’s meaning—strength, endurance, and a life that refuses
+                      to give up. Even when life leans, struggles, or changes direction, it can
+                      continue to recover and grow.
+                    </p>
+                  </section>
+
+                  <section>
+                    <p className="text-xs font-semibold uppercase tracking-[0.2em] text-pink">
+                      Concept
+                    </p>
+                    <h4 className="mt-3 font-display text-xl font-bold text-ink">
+                      Falling into balance
+                    </h4>
+                    <img
+                      src={rockingLifeConceptPoster}
+                      alt="Rocking Life concept poster showing a balancing vase inspired by resilience"
+                      width={1122}
+                      height={1402}
+                      loading="lazy"
+                      className="mt-5 w-full rounded-[18px] border border-ink/10 object-cover"
+                    />
+                    <p className="mt-4 leading-relaxed text-ink/70">
+                      Rocking Life turns that interpretation into a vase that appears ready to fall,
+                      yet continually finds its way back to balance. Instead of treating
+                      instability as a weakness, the design transforms it into movement,
+                      character, and a visible expression of resilience.
+                    </p>
+                  </section>
+
+                  <section>
+                    <p className="text-xs font-semibold uppercase tracking-[0.2em] text-pink">
+                      How It Works
+                    </p>
+                    <h4 className="mt-3 font-display text-xl font-bold text-ink">
+                      A controlled centre of gravity
+                    </h4>
+                    <p className="mt-3 leading-relaxed text-ink/70">
+                      The unconventional circular form blends the ideas of falling and balance. A
+                      spherical steel counterweight is positioned low in the structure, shifting
+                      the centre of gravity beneath the vase. When the form is pushed or tilted,
+                      the weight generates a restoring force that guides it back toward a stable
+                      resting position.
+                    </p>
+                    <div className="mt-5">
+                      <figure className="overflow-hidden rounded-[18px] border border-ink/10">
+                        <img
+                          src={rockingLifeDetailCloseup}
+                          alt="Close-up of Rocking Life's moving counterbalance mechanism"
+                          width={1448}
+                          height={1086}
+                          loading="lazy"
+                          className="w-full object-cover"
+                        />
+                      </figure>
+                      <p className="mt-3 text-sm font-semibold leading-relaxed text-ink/75">
+                        The spheres move with every shift of the vase, redistributing weight to
+                        create a responsive counterbalance and restore equilibrium.
+                      </p>
+                    </div>
+                    <div className="mt-5 grid gap-3 sm:grid-cols-3">
+                      {[
+                        ["01", "Tilt", "An external touch sets the circular body in motion."],
+                        ["02", "Counterbalance", "The steel sphere keeps the centre of gravity low."],
+                        ["03", "Recover", "The form rocks back and settles into equilibrium."],
+                      ].map(([number, title, text]) => (
+                        <article key={title} className="rounded-[18px] border border-ink/10 bg-soft-blue/45 p-5">
+                          <span className="text-xs font-bold tracking-[0.18em] text-pink">{number}</span>
+                          <h5 className="mt-3 font-display text-lg font-bold text-ink">{title}</h5>
+                          <p className="mt-2 text-sm leading-relaxed text-ink/65">{text}</p>
+                        </article>
+                      ))}
+                    </div>
+                  </section>
+
+                  <section>
+                    <p className="text-xs font-semibold uppercase tracking-[0.2em] text-pink">
+                      Form Development
+                    </p>
+                    <p className="mt-3 leading-relaxed text-ink/70">
+                      The form was developed by balancing three competing needs: a strong circular
+                      silhouette, enough space for the flower and water container, and a low,
+                      reliable centre of gravity. The proportions of the ring, the position of the
+                      flower stem, and the placement of the internal counterweight were refined
+                      together so the object could feel visually off-balance without becoming
+                      structurally unstable.
+                    </p>
+                  </section>
+
+                  <section>
+                    <p className="text-xs font-semibold uppercase tracking-[0.2em] text-pink">
+                      Prototype Testing
+                    </p>
+                    <p className="mt-3 leading-relaxed text-ink/70">
+                      Prototype testing focused on how far the vase could tilt, how smoothly it
+                      returned, and whether the flower remained securely supported during motion.
+                      The process examined the relationship between the upper load and the steel
+                      counterweight, then refined their positions to reduce excessive rocking and
+                      create a more controlled return to balance.
+                    </p>
+                    <div className="mt-5 rounded-[18px] border border-pink/20 bg-pink/8 p-5">
+                      <p className="font-display text-lg font-bold text-ink">Design criteria</p>
+                      <p className="mt-2 text-sm leading-relaxed text-ink/70">
+                        Stable with flowers in place · Responsive to a gentle push · Controlled
+                        rocking motion · Reliable return to equilibrium
+                      </p>
+                    </div>
+                  </section>
+
+                  <section>
+                    <p className="text-xs font-semibold uppercase tracking-[0.2em] text-pink">
+                      Final Product
+                    </p>
+                    <h4 className="mt-3 font-display text-xl font-bold text-ink">
+                      A vase of resilience
+                    </h4>
+                    <p className="mt-3 leading-relaxed text-ink/70">
+                      The final design transforms balance into a living interaction. Its colourful
+                      components make the mechanism visible and playful, while the Kaew Jao Jom
+                      flower completes the metaphor: life can move, lean, and still remain standing.
+                    </p>
+                    <div className="mt-5 flex snap-x snap-mandatory gap-4 overflow-x-auto pb-3">
+                      {[
+                        [rockingLifeProductVisual, "Rocking Life balancing vase standing with blue flowers"],
+                        [rockingLifeRockingView, "Rocking Life vase tilted while maintaining balance"],
+                      ].map(([image, alt]) => (
+                        <div
+                          key={image}
+                          className="aspect-[3/4] w-[82%] shrink-0 snap-start overflow-hidden rounded-[18px] border border-ink/10 sm:w-[48%]"
+                        >
+                          <img
+                            src={image}
+                            alt={alt}
+                            loading="lazy"
+                            className="h-full w-full object-cover"
+                          />
+                        </div>
+                      ))}
+                    </div>
+                  </section>
+
+                  <section className="rounded-[20px] border border-ink/10 bg-card p-6">
+                    <p className="text-xs font-semibold uppercase tracking-[0.2em] text-pink">
+                      Reflection
+                    </p>
+                    <p className="mt-3 leading-relaxed text-ink/70">
+                      Rocking Life shows that stability does not have to mean remaining still. By
+                      allowing movement and recovery to become part of the product, the vase turns
+                      a mechanical principle into an emotional story about adapting without giving
+                      up.
+                    </p>
+                  </section>
+                </div>
+              )}
               {active.id === "circus-sweet" && (
                 <img
                   src={circusSweetPoster}
