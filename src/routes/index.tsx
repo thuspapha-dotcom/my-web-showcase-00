@@ -44,6 +44,7 @@ import cuDormiePrototypeTesting from "../assets/cu-dormie-case-study/prototype-t
 import projectPopFreshFood from "../assets/project-pop-fresh-food.jpg";
 import projectWeR from "../assets/project-we-r.jpg";
 import projectSaranthai from "../assets/project-saranthai.jpg";
+import saranthaiDiningLounge from "../assets/saranthai-dining-lounge.jpg";
 import projectSelfLove from "../assets/project-self-love-new.png";
 import selfLoveManicureArea from "../assets/self-love-manicure-area.png";
 import projectOohJuicy from "../assets/project-ooh-juicy.jpg";
@@ -875,6 +876,25 @@ export function HomePage() {
                     alt="Self Love nail salon manicure area with Memphis-inspired colours and curved forms"
                     width={1536}
                     height={1024}
+                    loading="lazy"
+                    className="mt-5 w-full rounded-[18px] border border-ink/10 object-cover"
+                  />
+                </section>
+              )}
+              {active.id === "interior" && (
+                <section className="pt-3">
+                  <p className="flex items-center gap-2 text-sm font-semibold uppercase tracking-[0.25em] text-pink">
+                    <Sparkle className="h-4 w-4 shrink-0" />
+                    Interior Detail
+                  </p>
+                  <h4 className="mt-4 font-display text-2xl font-bold text-ink">
+                    Cultural dining lounge
+                  </h4>
+                  <img
+                    src={saranthaiDiningLounge}
+                    alt="Saranthai cultural train dining lounge with woven seating and views of Thai craftsmanship"
+                    width={1431}
+                    height={941}
                     loading="lazy"
                     className="mt-5 w-full rounded-[18px] border border-ink/10 object-cover"
                   />
