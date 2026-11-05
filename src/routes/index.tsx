@@ -46,6 +46,7 @@ import projectWeR from "../assets/project-we-r.jpg";
 import projectSaranthai from "../assets/project-saranthai.jpg";
 import saranthaiDiningLounge from "../assets/saranthai-dining-lounge.jpg";
 import saranthaiDiningLoungeSeating from "../assets/saranthai-dining-lounge-seating.png";
+import saranthaiReception from "../assets/saranthai-reception.jpg";
 import projectSelfLove from "../assets/project-self-love-new.png";
 import selfLoveManicureArea from "../assets/self-love-manicure-area.png";
 import projectOohJuicy from "../assets/project-ooh-juicy.jpg";
@@ -904,6 +905,15 @@ export function HomePage() {
                     alt="Saranthai cultural dining lounge seating beside panoramic train windows"
                     width={1344}
                     height={964}
+                    loading="lazy"
+                    className="mt-4 w-full rounded-[18px] border border-ink/10 object-cover"
+                  />
+                  <h5 className="mt-8 font-display text-xl font-bold text-ink">Reception</h5>
+                  <img
+                    src={saranthaiReception}
+                    alt="Saranthai reception area with contemporary Thai woven details and warm wood finishes"
+                    width={1656}
+                    height={950}
                     loading="lazy"
                     className="mt-4 w-full rounded-[18px] border border-ink/10 object-cover"
                   />
