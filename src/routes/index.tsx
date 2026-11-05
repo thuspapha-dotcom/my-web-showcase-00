@@ -331,6 +331,8 @@ const PROJECT_ORDER = [
   "landmark",
 ];
 
+const SELECTED_PROJECT_IDS = ["buddy-journey", "kbtg", "brand", "nami", "saijai"];
+
 const CASE_STUDY_META: Record<string, { label: string; focus: string }> = {
   "buddy-journey": { label: "", focus: "Service design · UX/UI · Social connection" },
   kbtg: { label: "", focus: "Roommate matching · UX/UI · Prototyping" },
@@ -454,6 +456,14 @@ export function HomePage() {
     );
   }, [filter]);
 
+  const selectedProjects = useMemo(
+    () =>
+      SELECTED_PROJECT_IDS.map((id) => PROJECTS.find((project) => project.id === id)).filter(
+        (project): project is Project => Boolean(project),
+      ),
+    [],
+  );
+
   const activeIndex = active ? visible.findIndex((project) => project.id === active.id) : -1;
   const previousProject = activeIndex > 0 ? visible[activeIndex - 1] : null;
   const nextProject = activeIndex >= 0 && activeIndex < visible.length - 1
@@ -568,14 +578,60 @@ export function HomePage() {
       {/* WORK */}
       <section id="work" className="work-pattern scroll-mt-20 px-5 py-20 text-ink sm:px-8">
         <div className="mx-auto max-w-6xl">
+          <div>
+            <p className="flex items-center gap-2 text-sm font-semibold uppercase tracking-[0.25em] text-pink-deep">
+              <Sparkle className="h-4 w-4 shrink-0" />
+              Selected Projects
+            </p>
+            <div className="mt-3">
+              <h2 className="max-w-3xl font-display text-5xl font-normal leading-[0.95] sm:text-7xl">
+                Five projects that show how I think and create
+              </h2>
+            </div>
+          </div>
+
+          <div className="mt-12 flex snap-x snap-mandatory gap-5 overflow-x-auto pb-5 [scrollbar-color:rgba(35,36,39,.35)_transparent] [scrollbar-width:thin]">
+            {selectedProjects.map((project, index) => (
+              <article
+                key={project.id}
+                className="card-lift w-[82vw] max-w-[520px] shrink-0 snap-start overflow-hidden rounded-[24px] border border-ink/10 bg-card text-ink sm:w-[58vw] lg:w-[40vw]"
+              >
+                <button
+                  type="button"
+                  onClick={() => setActive(project)}
+                  className="block h-full w-full text-left"
+                  aria-label={`View details for ${project.title}`}
+                >
+                  <div className="overflow-hidden">
+                    <img
+                      src={project.cardImage ?? project.image}
+                      alt={project.title}
+                      loading={index < 2 ? "eager" : "lazy"}
+                      width={1280}
+                      height={800}
+                      className="aspect-[16/10] w-full object-cover transition duration-500 hover:scale-[1.02]"
+                    />
+                  </div>
+                  <div className="p-5 sm:p-6">
+                    <h3 className="font-display text-2xl font-bold leading-tight">
+                      {project.title}
+                    </h3>
+                  </div>
+                </button>
+              </article>
+            ))}
+          </div>
+
+          <div className="my-20 border-t border-ink/12" />
+
           <div className="flex flex-col gap-6 md:flex-row md:items-end md:justify-between">
             <div>
               <p className="flex items-center gap-2 text-sm font-semibold uppercase tracking-[0.25em] text-pink-deep">
                 <Sparkle className="h-4 w-4 shrink-0" />
-                Work
+                Project Archive
               </p>
               <h2 className="mt-3 font-display text-5xl font-normal sm:text-7xl">
-                Selected Work
+                All Projects
               </h2>
             </div>
             <div className="flex flex-wrap gap-2">
