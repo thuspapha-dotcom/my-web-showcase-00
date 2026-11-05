@@ -49,7 +49,6 @@ import saranthaiDiningLoungeSeating from "../assets/saranthai-dining-lounge-seat
 import saranthaiReception from "../assets/saranthai-reception.jpg";
 import projectSelfLove from "../assets/project-self-love-new.png";
 import selfLoveManicureArea from "../assets/self-love-manicure-area.png";
-import projectOohJuicy from "../assets/project-ooh-juicy.jpg";
 import rockingLifeConceptPoster from "../assets/rocking-life-concept-poster.png";
 import rockingLifeDetailCloseup from "../assets/rocking-life-detail-closeup.png";
 import rockingLifeFlowerMeaning from "../assets/rocking-life-flower-meaning.png";
@@ -247,17 +246,6 @@ const PROJECTS: Project[] = [
     image: projectSelfLove,
   },
   {
-    id: "ooh-juicy",
-    title: "Ooh Juicy",
-    category: "Branding",
-    desc: "A playful fruit brand identity built around freshness, delight, and memorable packaging.",
-    detail:
-      "Ooh Juicy combines the delighted exclamation ‘Oh’ with ‘Juice’ to create a catchy, friendly name. The identity uses energetic typography, fresh colors, character graphics, and packaging that express the brand's fun and vibrant personality.",
-    role: "Research | Concept design | Branding design | Packaging design",
-    tools: ["Illustrator", "Photoshop"],
-    image: projectOohJuicy,
-  },
-  {
     id: "rocking-life",
     title: "Rocking Life",
     category: "Product",
@@ -323,7 +311,6 @@ const PROJECT_ORDER = [
   "interior",
   "product",
   "self-love",
-  "ooh-juicy",
   "rocking-life",
   "circus-sweet",
   "newsphoter",
@@ -333,6 +320,14 @@ const PROJECT_ORDER = [
 
 const SELECTED_PROJECT_IDS = ["buddy-journey", "kbtg", "brand", "nami", "saijai"];
 
+const SELECTED_PROJECT_TONES = [
+  { folder: "bg-[#8bcf8f]", tab: "bg-[#72c780]" },
+  { folder: "bg-[#f5a7c5]", tab: "bg-[#ee8fb6]" },
+  { folder: "bg-[#8d91e8]", tab: "bg-[#777ddb]" },
+  { folder: "bg-[#f3cf67]", tab: "bg-[#e9bd45]" },
+  { folder: "bg-[#78c7d7]", tab: "bg-[#5cb7ca]" },
+];
+
 const CASE_STUDY_META: Record<string, { label: string; focus: string }> = {
   "buddy-journey": { label: "", focus: "Service design · UX/UI · Social connection" },
   kbtg: { label: "", focus: "Roommate matching · UX/UI · Prototyping" },
@@ -341,7 +336,6 @@ const CASE_STUDY_META: Record<string, { label: string; focus: string }> = {
   interior: { label: "", focus: "Cultural tourism · Space planning · Rendering" },
   product: { label: "", focus: "Experience design · UX/UI · Prototyping" },
   "self-love": { label: "", focus: "Interior design · Memphis style · Rendering" },
-  "ooh-juicy": { label: "", focus: "Brand identity · Packaging · Character" },
   "rocking-life": { label: "", focus: "Product design · Balance · Prototyping" },
   "circus-sweet": { label: "", focus: "Character design · 3D printing · Rendering" },
   newsphoter: { label: "", focus: "Jewelry · Storytelling · Graphic composition" },
@@ -578,48 +572,60 @@ export function HomePage() {
       {/* WORK */}
       <section id="work" className="work-pattern scroll-mt-20 px-5 py-20 text-ink sm:px-8">
         <div className="mx-auto max-w-6xl">
-          <div>
-            <p className="flex items-center gap-2 text-sm font-semibold uppercase tracking-[0.25em] text-pink-deep">
-              <Sparkle className="h-4 w-4 shrink-0" />
-              Selected Projects
-            </p>
-            <div className="mt-3">
-              <h2 className="max-w-3xl font-display text-5xl font-normal leading-[0.95] sm:text-7xl">
-                Five projects that show how I think and create
-              </h2>
+          <div className="rounded-[32px] border border-[#2b2925]/10 bg-[#f4ead7] px-5 py-8 shadow-[0_24px_70px_rgba(60,45,25,.08)] sm:px-8 sm:py-10">
+            <div className="flex items-start justify-between gap-6">
+              <div>
+                <p className="text-xs font-bold uppercase tracking-[0.28em] text-[#25231f]/60">
+                  Selected Projects
+                </p>
+                <h2 className="mt-4 max-w-3xl font-display text-5xl font-normal leading-[0.95] text-[#201f1c] sm:text-7xl">
+                  Five projects that show how I think and create
+                </h2>
+              </div>
+              <span className="hidden shrink-0 rounded-full border border-[#25231f]/40 px-4 py-2 text-xs font-bold uppercase tracking-[0.16em] text-[#25231f]/65 sm:block">
+                Scroll →
+              </span>
             </div>
-          </div>
 
-          <div className="mt-12 flex snap-x snap-mandatory gap-5 overflow-x-auto pb-5 [scrollbar-color:rgba(35,36,39,.35)_transparent] [scrollbar-width:thin]">
-            {selectedProjects.map((project, index) => (
-              <article
-                key={project.id}
-                className="card-lift w-[82vw] max-w-[520px] shrink-0 snap-start overflow-hidden rounded-[24px] border border-ink/10 bg-card text-ink sm:w-[58vw] lg:w-[40vw]"
-              >
-                <button
-                  type="button"
-                  onClick={() => setActive(project)}
-                  className="block h-full w-full text-left"
-                  aria-label={`View details for ${project.title}`}
-                >
-                  <div className="overflow-hidden">
-                    <img
-                      src={project.cardImage ?? project.image}
-                      alt={project.title}
-                      loading={index < 2 ? "eager" : "lazy"}
-                      width={1280}
-                      height={800}
-                      className="aspect-[16/10] w-full object-cover transition duration-500 hover:scale-[1.02]"
-                    />
-                  </div>
-                  <div className="p-5 sm:p-6">
-                    <h3 className="font-display text-2xl font-bold leading-tight">
-                      {project.title}
-                    </h3>
-                  </div>
-                </button>
-              </article>
-            ))}
+            <div className="mt-12 flex snap-x snap-mandatory gap-5 overflow-x-auto pb-5 [scrollbar-color:rgba(35,36,39,.35)_transparent] [scrollbar-width:thin]">
+              {selectedProjects.map((project, index) => {
+                const tone = SELECTED_PROJECT_TONES[index % SELECTED_PROJECT_TONES.length];
+                return (
+                  <article
+                    key={project.id}
+                    className={`card-lift w-[80vw] max-w-[500px] shrink-0 snap-start overflow-hidden rounded-[26px] rounded-tr-[38px] border border-[#25231f]/10 text-[#201f1c] shadow-[0_18px_40px_rgba(54,42,24,.13)] sm:w-[56vw] lg:w-[38vw] ${tone.folder}`}
+                  >
+                    <button
+                      type="button"
+                      onClick={() => setActive(project)}
+                      className="block h-full w-full text-left"
+                      aria-label={`View details for ${project.title}`}
+                    >
+                      <div className={`ml-auto w-[72%] rounded-bl-[18px] px-5 py-3 ${tone.tab}`}>
+                        <h3 className="truncate font-display text-lg font-bold sm:text-xl">
+                          {project.title}
+                        </h3>
+                      </div>
+                      <div className="m-3 mt-0 overflow-hidden rounded-[20px] border border-[#25231f]/10 bg-[#fffdf8] p-2.5 shadow-[0_7px_20px_rgba(57,42,20,.12)]">
+                        <img
+                          src={project.cardImage ?? project.image}
+                          alt={project.title}
+                          loading={index < 2 ? "eager" : "lazy"}
+                          width={1280}
+                          height={800}
+                          className="aspect-[16/10] w-full rounded-[14px] object-cover transition duration-500 hover:scale-[1.02]"
+                        />
+                      </div>
+                    </button>
+                  </article>
+                );
+              })}
+            </div>
+
+            <div className="mt-5 flex items-center justify-between border-t border-[#25231f]/15 pt-4 text-[11px] font-bold uppercase tracking-[0.2em] text-[#25231f]/55">
+              <span>Curated portfolio</span>
+              <span>01 — 05</span>
+            </div>
           </div>
 
           <div className="my-20 border-t border-ink/12" />
