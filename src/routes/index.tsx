@@ -12,6 +12,7 @@ import saijaiArExperience from "../assets/saijai-ar-experience.png";
 import saijaiBrandingBoard from "../assets/saijai-branding-board.png";
 import saijaiGenZInsight from "../assets/saijai-gen-z-insight.png";
 import saijaiSustainabilityCertificate from "../assets/saijai-sustainability-certificate.png";
+import saijaiPrototype from "../assets/saijai-prototype.jpg";
 import pKbtg from "../assets/p-kbtg.jpg";
 import pBrand from "../assets/p-brand.jpg";
 import pInterior from "../assets/p-interior.jpg";
@@ -49,6 +50,25 @@ import saranthaiDiningLoungeSeating from "../assets/saranthai-dining-lounge-seat
 import saranthaiReception from "../assets/saranthai-reception.jpg";
 import projectSelfLove from "../assets/project-self-love-new.png";
 import selfLoveManicureArea from "../assets/self-love-manicure-area.png";
+import projectKalawelaThaTien from "../assets/kalawela-cover.jpg";
+import kalawelaUnseen from "../assets/kalawela-unseen.jpg";
+import kalawelaProblem from "../assets/kalawela-problem.jpg";
+import kalawelaPersona from "../assets/kalawela-persona.jpg";
+import kalawelaIdentity from "../assets/kalawela-identity.jpg";
+import kalawelaVisualIdentity from "../assets/kalawela-visual-identity.jpg";
+import kalawelaTouchpoints from "../assets/kalawela-touchpoints.jpg";
+import kalawelaJourney from "../assets/kalawela-journey.jpg";
+import kalawelaTime from "../assets/kalawela-time.jpg";
+import kalawelaWayOfLife from "../assets/kalawela-way-of-life.jpg";
+import kalawelaPavilion from "../assets/kalawela-pavilion.jpg";
+import kalawelaLegend from "../assets/kalawela-legend.jpg";
+import kalawelaInstallation from "../assets/kalawela-installation.jpg";
+import kalawelaViewpoint from "../assets/kalawela-viewpoint.jpg";
+import kalawelaViewpointDetail from "../assets/kalawela-viewpoint-detail.jpg";
+import kalawelaMemoryFilm from "../assets/kalawela-memory-film.jpg";
+import kalawelaCatwalk from "../assets/kalawela-catwalk.jpg";
+import kalawelaThaTienGallery01 from "../assets/kalawela-tha-tien-gallery-01.jpg";
+import kalawelaThaTienGallery02 from "../assets/kalawela-tha-tien-gallery-02.jpg";
 import rockingLifeConceptPoster from "../assets/rocking-life-concept-poster.png";
 import rockingLifeDetailCloseup from "../assets/rocking-life-detail-closeup.png";
 import rockingLifeFlowerMeaning from "../assets/rocking-life-flower-meaning.png";
@@ -223,6 +243,20 @@ const PROJECTS: Project[] = [
     image: projectSaranthai,
   },
   {
+    id: "kalawela-tha-tien",
+    title: "กาลเวลาท่าเตียน",
+    category: "Interior·3D",
+    displayCategory: "EXPERIENCE · SPATIAL DESIGN",
+    desc: "A night-time cultural experience that reveals Tha Tien through light, shadow, stories, and the rhythm of the Chao Phraya River.",
+    detail:
+      "Kalawela Tha Tien reimagines the neighbourhood's prime time from 5–9 PM as a walkable cultural experience. Light-and-shadow installations turn local history, riverside livelihoods, migration, and the legend of Tha Tien into a journey that connects visitors with local businesses and the community after sunset.",
+    role: "Research | Interview & co-creation | Experience design | Spatial design | Visual identity | 3D visualization",
+    tools: ["Illustrator", "Photoshop", "SketchUp", "Procreate"],
+    image: projectKalawelaThaTien,
+    timeline: "Cultural experience design project",
+    team: "5 members from the Department of Industrial Design, Faculty of Architecture, Chulalongkorn University",
+  },
+  {
     id: "product",
     title: "We R",
     category: "Product",
@@ -309,6 +343,7 @@ const PROJECT_ORDER = [
   "saijai",
   "brand",
   "interior",
+  "kalawela-tha-tien",
   "product",
   "self-love",
   "rocking-life",
@@ -320,20 +355,13 @@ const PROJECT_ORDER = [
 
 const SELECTED_PROJECT_IDS = ["buddy-journey", "kbtg", "brand", "nami", "saijai"];
 
-const SELECTED_PROJECT_TONES = [
-  { folder: "bg-[#8bcf8f]", tab: "bg-[#72c780]" },
-  { folder: "bg-[#f5a7c5]", tab: "bg-[#ee8fb6]" },
-  { folder: "bg-[#8d91e8]", tab: "bg-[#777ddb]" },
-  { folder: "bg-[#f3cf67]", tab: "bg-[#e9bd45]" },
-  { folder: "bg-[#78c7d7]", tab: "bg-[#5cb7ca]" },
-];
-
 const CASE_STUDY_META: Record<string, { label: string; focus: string }> = {
   "buddy-journey": { label: "", focus: "Service design · UX/UI · Social connection" },
   kbtg: { label: "", focus: "Roommate matching · UX/UI · Prototyping" },
   saijai: { label: "", focus: "Branding · Packaging · Sustainability" },
   brand: { label: "", focus: "Service design · UX design · Healthy habits" },
   interior: { label: "", focus: "Cultural tourism · Space planning · Rendering" },
+  "kalawela-tha-tien": { label: "", focus: "Experience design · Place identity · Light installation" },
   product: { label: "", focus: "Experience design · UX/UI · Prototyping" },
   "self-love": { label: "", focus: "Interior design · Memphis style · Rendering" },
   "rocking-life": { label: "", focus: "Product design · Balance · Prototyping" },
@@ -476,7 +504,7 @@ export function HomePage() {
   }, [active]);
 
   return (
-    <div className="min-h-screen bg-canvas text-ink">
+    <div className="candy-editorial-visual min-h-screen bg-canvas text-ink">
       {/* NAV */}
       <header className="sticky top-0 z-40 border-b border-card/15 bg-ink text-card">
         <nav className="mx-auto flex h-16 max-w-6xl items-center justify-between px-5 sm:px-8">
@@ -572,60 +600,48 @@ export function HomePage() {
       {/* WORK */}
       <section id="work" className="work-pattern scroll-mt-20 px-5 py-20 text-ink sm:px-8">
         <div className="mx-auto max-w-6xl">
-          <div className="rounded-[32px] border border-[#2b2925]/10 bg-[#f4ead7] px-5 py-8 shadow-[0_24px_70px_rgba(60,45,25,.08)] sm:px-8 sm:py-10">
-            <div className="flex items-start justify-between gap-6">
-              <div>
-                <p className="text-xs font-bold uppercase tracking-[0.28em] text-[#25231f]/60">
-                  Selected Projects
-                </p>
-                <h2 className="mt-4 max-w-3xl font-display text-5xl font-normal leading-[0.95] text-[#201f1c] sm:text-7xl">
-                  Five projects that show how I think and create
-                </h2>
-              </div>
-              <span className="hidden shrink-0 rounded-full border border-[#25231f]/40 px-4 py-2 text-xs font-bold uppercase tracking-[0.16em] text-[#25231f]/65 sm:block">
-                Scroll →
-              </span>
+          <div>
+            <p className="flex items-center gap-2 text-sm font-semibold uppercase tracking-[0.25em] text-pink-deep">
+              <Sparkle className="h-4 w-4 shrink-0" />
+              Selected Projects
+            </p>
+            <div className="mt-3">
+              <h2 className="max-w-3xl font-display text-5xl font-normal leading-[0.95] sm:text-7xl">
+                Five projects that show how I think and create
+              </h2>
             </div>
+          </div>
 
-            <div className="mt-12 flex snap-x snap-mandatory gap-5 overflow-x-auto pb-5 [scrollbar-color:rgba(35,36,39,.35)_transparent] [scrollbar-width:thin]">
-              {selectedProjects.map((project, index) => {
-                const tone = SELECTED_PROJECT_TONES[index % SELECTED_PROJECT_TONES.length];
-                return (
-                  <article
-                    key={project.id}
-                    className={`card-lift w-[80vw] max-w-[500px] shrink-0 snap-start overflow-hidden rounded-[26px] rounded-tr-[38px] border border-[#25231f]/10 text-[#201f1c] shadow-[0_18px_40px_rgba(54,42,24,.13)] sm:w-[56vw] lg:w-[38vw] ${tone.folder}`}
-                  >
-                    <button
-                      type="button"
-                      onClick={() => setActive(project)}
-                      className="block h-full w-full text-left"
-                      aria-label={`View details for ${project.title}`}
-                    >
-                      <div className={`ml-auto w-[72%] rounded-bl-[18px] px-5 py-3 ${tone.tab}`}>
-                        <h3 className="truncate font-display text-lg font-bold sm:text-xl">
-                          {project.title}
-                        </h3>
-                      </div>
-                      <div className="m-3 mt-0 overflow-hidden rounded-[20px] border border-[#25231f]/10 bg-[#fffdf8] p-2.5 shadow-[0_7px_20px_rgba(57,42,20,.12)]">
-                        <img
-                          src={project.cardImage ?? project.image}
-                          alt={project.title}
-                          loading={index < 2 ? "eager" : "lazy"}
-                          width={1280}
-                          height={800}
-                          className="aspect-[16/10] w-full rounded-[14px] object-cover transition duration-500 hover:scale-[1.02]"
-                        />
-                      </div>
-                    </button>
-                  </article>
-                );
-              })}
-            </div>
-
-            <div className="mt-5 flex items-center justify-between border-t border-[#25231f]/15 pt-4 text-[11px] font-bold uppercase tracking-[0.2em] text-[#25231f]/55">
-              <span>Curated portfolio</span>
-              <span>01 — 05</span>
-            </div>
+          <div className="mt-12 flex snap-x snap-mandatory gap-5 overflow-x-auto pb-5 [scrollbar-color:rgba(35,36,39,.35)_transparent] [scrollbar-width:thin]">
+            {selectedProjects.map((project, index) => (
+              <article
+                key={project.id}
+                className="card-lift w-[82vw] max-w-[520px] shrink-0 snap-start overflow-hidden rounded-[24px] border border-ink/10 bg-card text-ink sm:w-[58vw] lg:w-[40vw]"
+              >
+                <button
+                  type="button"
+                  onClick={() => setActive(project)}
+                  className="block h-full w-full text-left"
+                  aria-label={`View details for ${project.title}`}
+                >
+                  <div className="overflow-hidden">
+                    <img
+                      src={project.cardImage ?? project.image}
+                      alt={project.title}
+                      loading={index < 2 ? "eager" : "lazy"}
+                      width={1280}
+                      height={800}
+                      className="aspect-[16/10] w-full object-cover transition duration-500 hover:scale-[1.02]"
+                    />
+                  </div>
+                  <div className="p-5 sm:p-6">
+                    <h3 className="font-display text-2xl font-bold leading-tight">
+                      {project.title}
+                    </h3>
+                  </div>
+                </button>
+              </article>
+            ))}
           </div>
 
           <div className="my-20 border-t border-ink/12" />
@@ -980,6 +996,247 @@ export function HomePage() {
                     className="mt-4 w-full rounded-[18px] border border-ink/10 object-cover"
                   />
                 </section>
+              )}
+              {active.id === "kalawela-tha-tien" && (
+                <div className="space-y-10 pt-3">
+                  <section>
+                    <p className="flex items-center gap-2 text-sm font-semibold uppercase tracking-[0.25em] text-pink">
+                      <Sparkle className="h-4 w-4 shrink-0" />
+                      Context
+                    </p>
+                    <h4 className="mt-4 font-display text-2xl font-bold text-ink">
+                      From a daytime landmark to a night-time neighbourhood
+                    </h4>
+                    <p className="mt-3 leading-relaxed text-ink/70">
+                      Tha Tien is a historic riverside district shaped by trade, migration, religion,
+                      and everyday life along the Chao Phraya River. Its Thai, Chinese, Vietnamese,
+                      Muslim, and Western influences remain visible in the architecture, shrines,
+                      markets, crafts, and local businesses—but many of these stories become difficult
+                      to discover after sunset.
+                    </p>
+                    <img
+                      src={kalawelaUnseen}
+                      alt="Field research documenting unseen night-time details and local life in Tha Tien"
+                      width={1800}
+                      height={1013}
+                      loading="lazy"
+                      className="mt-5 w-full rounded-[18px] border border-ink/10 object-cover"
+                    />
+                    <div className="mt-8">
+                      <p className="text-xs font-semibold uppercase tracking-[0.2em] text-pink">
+                        Catwalk
+                      </p>
+                      <h5 className="mt-3 font-display text-xl font-bold text-ink">
+                        Walking Tha Tien from day to night
+                      </h5>
+                      <p className="mt-2 text-sm leading-relaxed text-ink/65">
+                        A visual field study documenting routes, storefronts, landmarks, local life,
+                        light conditions, and the changing atmosphere across the neighbourhood.
+                      </p>
+                      <img
+                        src={kalawelaCatwalk}
+                        alt="Tha Tien catwalk field study showing the neighbourhood across daytime, sunset, and night"
+                        width={1764}
+                        height={982}
+                        loading="lazy"
+                        className="mt-5 w-full rounded-[18px] border border-ink/10 object-cover"
+                      />
+                    </div>
+                  </section>
+
+                  <section>
+                    <p className="flex items-center gap-2 text-sm font-semibold uppercase tracking-[0.25em] text-pink">
+                      <Sparkle className="h-4 w-4 shrink-0" />
+                      Research &amp; Opportunity
+                    </p>
+                    <h4 className="mt-4 font-display text-2xl font-bold text-ink">
+                      Make 5–9 PM worth staying for
+                    </h4>
+                    <p className="mt-3 leading-relaxed text-ink/70">
+                      Field observation, stakeholder mapping, interviews, and co-creation revealed a
+                      clear opportunity: visitors already come for the sunset, but limited activities,
+                      early closing hours, unclear wayfinding, and dark or quiet routes make it difficult
+                      to keep exploring. The design challenge was to turn this prime time into a shared,
+                      enjoyable experience for visitors, businesses, and the local community.
+                    </p>
+                    <img
+                      src={kalawelaProblem}
+                      alt="Kalawela Tha Tien problem statement and intended impact"
+                      width={1800}
+                      height={1013}
+                      loading="lazy"
+                      className="mt-5 w-full rounded-[18px] border border-ink/10 object-cover"
+                    />
+                    <div className="mt-5 grid gap-3 sm:grid-cols-3">
+                      {[
+                        ["30", "tourists interviewed", "15 Thai and 15 international visitors joined the research."],
+                        ["80%", "preferred Tha Tien at night", "Thai participants valued the cooler, calmer evening atmosphere."],
+                        ["90%", "came for the sunset", "International visitors already saw the riverside view as a destination."],
+                      ].map(([number, label, text]) => (
+                        <article key={label} className="rounded-[18px] border border-ink/10 bg-card p-5">
+                          <p className="font-display text-3xl font-bold text-pink-deep">{number}</p>
+                          <h5 className="mt-2 font-semibold text-ink">{label}</h5>
+                          <p className="mt-2 text-sm leading-relaxed text-ink/65">{text}</p>
+                        </article>
+                      ))}
+                    </div>
+                    <img
+                      src={kalawelaPersona}
+                      alt="Primary persona for the Kalawela Tha Tien night-time cultural experience"
+                      width={1800}
+                      height={1013}
+                      loading="lazy"
+                      className="mt-5 w-full rounded-[18px] border border-ink/10 object-cover"
+                    />
+                  </section>
+
+                  <section>
+                    <p className="flex items-center gap-2 text-sm font-semibold uppercase tracking-[0.25em] text-pink">
+                      <Sparkle className="h-4 w-4 shrink-0" />
+                      Place Identity
+                    </p>
+                    <h4 className="mt-4 font-display text-2xl font-bold text-ink">
+                      Stories carried through time
+                    </h4>
+                    <p className="mt-3 leading-relaxed text-ink/70">
+                      Research was distilled into four narratives that could guide both the visual
+                      identity and the spatial journey: river migration and trade, layers of time,
+                      riverside ways of life, and the myth of the giants whose battle gave Tha Tien
+                      its name.
+                    </p>
+                    <div className="mt-5 grid gap-4 sm:grid-cols-2">
+                      <img
+                        src={kalawelaIdentity}
+                        alt="Tha Tien place identity research across trade, local life, legends, and culture"
+                        width={1800}
+                        height={1013}
+                        loading="lazy"
+                        className="h-full w-full rounded-[18px] border border-ink/10 object-cover"
+                      />
+                      <img
+                        src={kalawelaVisualIdentity}
+                        alt="Kalawela Tha Tien visual identity, typography, and colour palette"
+                        width={1800}
+                        height={1013}
+                        loading="lazy"
+                        className="h-full w-full rounded-[18px] border border-ink/10 object-cover"
+                      />
+                    </div>
+                  </section>
+
+                  <section>
+                    <p className="flex items-center gap-2 text-sm font-semibold uppercase tracking-[0.25em] text-pink">
+                      <Sparkle className="h-4 w-4 shrink-0" />
+                      Concept
+                    </p>
+                    <h4 className="mt-4 font-display text-2xl font-bold text-ink">
+                      Kalawela Tha Tien — the neighbourhood revealed by light
+                    </h4>
+                    <p className="mt-3 leading-relaxed text-ink/70">
+                      The experience uses illuminated symbols, projected shadows, layered screens,
+                      and reflective materials to make local stories appear as daylight fades. The
+                      system gives visitors a route to follow while helping small businesses become
+                      easier to notice without relying only on social media.
+                    </p>
+                    <img
+                      src={kalawelaTouchpoints}
+                      alt="Four Kalawela Tha Tien touchpoint symbols representing journey, time, way of life, and legend"
+                      width={1800}
+                      height={1013}
+                      loading="lazy"
+                      className="mt-5 w-full rounded-[18px] border border-ink/10 object-cover"
+                    />
+                    <div className="mt-5 grid gap-3 sm:grid-cols-2">
+                      {[
+                        ["Journey", "Migration, river trade, and the people who arrived by boat."],
+                        ["Time", "The district's changing layers, revealed between sunset and night."],
+                        ["Way of Life", "Fishing, selling, eating, and living beside the river."],
+                        ["Legend", "The battle between the giants of Wat Pho and Wat Arun."],
+                      ].map(([title, text]) => (
+                        <article key={title} className="rounded-[18px] border border-ink/10 bg-soft-blue/45 p-5">
+                          <h5 className="font-display text-lg font-bold text-ink">{title}</h5>
+                          <p className="mt-2 text-sm leading-relaxed text-ink/65">{text}</p>
+                        </article>
+                      ))}
+                    </div>
+                  </section>
+
+                  <section>
+                    <p className="flex items-center gap-2 text-sm font-semibold uppercase tracking-[0.25em] text-pink">
+                      <Sparkle className="h-4 w-4 shrink-0" />
+                      Experience Journey
+                    </p>
+                    <p className="mt-3 leading-relaxed text-ink/70">
+                      Visitors move from Pratu Nokyung Alley toward the Wat Pho pier, discovering one
+                      story at a time. Each installation works as a landmark, a wayfinding cue, and a
+                      reason to pause, photograph, and continue exploring.
+                    </p>
+                    <p className="mt-3 text-sm text-ink/55">Swipe or scroll to follow the route →</p>
+                    <div className="mt-5 flex snap-x snap-mandatory gap-4 overflow-x-auto pb-4">
+                      {[
+                        [kalawelaJourney, "Journey installation inspired by river migration and trade"],
+                        [kalawelaTime, "Kalawela time landmark beside the Chao Phraya River"],
+                        [kalawelaWayOfLife, "Way of life light installation inside the riverside pavilion"],
+                        [kalawelaPavilion, "Night pavilion and illuminated riverside viewpoint"],
+                        [kalawelaLegend, "Legend installation inspired by the giants of Wat Pho and Wat Arun"],
+                      ].map(([image, alt]) => (
+                        <figure key={image} className="aspect-video w-[88%] shrink-0 snap-start overflow-hidden rounded-[18px] border border-ink/10 bg-card sm:w-[68%]">
+                          <img src={image} alt={alt} loading="lazy" className="h-full w-full object-cover" />
+                        </figure>
+                      ))}
+                    </div>
+                  </section>
+
+                  <section>
+                    <p className="flex items-center gap-2 text-sm font-semibold uppercase tracking-[0.25em] text-pink">
+                      <Sparkle className="h-4 w-4 shrink-0" />
+                      Final Experience
+                    </p>
+                    <h4 className="mt-4 font-display text-2xl font-bold text-ink">
+                      Discover, pause, and keep a memory
+                    </h4>
+                    <p className="mt-3 leading-relaxed text-ink/70">
+                      The final route combines illuminated story panels, patterned light boxes, and a
+                      riverside seating landscape inspired by shipping crates and Tha Tien's history
+                      of commerce. Participating shops give visitors a transparent “memory film” that
+                      frames the night view—connecting local businesses to a personal, shareable moment.
+                    </p>
+                    <div className="mt-5 grid gap-4 sm:grid-cols-2">
+                      {[kalawelaInstallation, kalawelaViewpoint, kalawelaViewpointDetail, kalawelaMemoryFilm].map(
+                        (image, index) => (
+                          <img
+                            key={image}
+                            src={image}
+                            alt={[
+                              "Illuminated multicultural story installation at the Tha Tien pavilion",
+                              "Riverside seating installation at the Kalawela Tha Tien viewpoint",
+                              "Shipping-crate-inspired seating and light details",
+                              "Visitor using a memory film to frame Wat Arun at night",
+                            ][index]}
+                            loading="lazy"
+                            className="h-full w-full rounded-[18px] border border-ink/10 object-cover"
+                          />
+                        ),
+                      )}
+                    </div>
+                  </section>
+
+                  <section>
+                    <p className="flex items-center gap-2 text-sm font-semibold uppercase tracking-[0.25em] text-pink">
+                      <Sparkle className="h-4 w-4 shrink-0" />
+                      Prototype Gallery
+                    </p>
+                    <p className="mt-3 text-sm text-ink/55">Swipe or scroll to explore the physical studies →</p>
+                    <div className="mt-5 flex snap-x snap-mandatory gap-4 overflow-x-auto pb-4">
+                      <figure className="w-[78%] shrink-0 snap-start overflow-hidden rounded-[18px] border border-ink/10 bg-card sm:w-[52%]">
+                        <img src={kalawelaThaTienGallery01} alt="Shadow projection prototype for the Kalawela Tha Tien project" width={1350} height={1800} loading="lazy" className="aspect-[3/4] h-full w-full object-cover" />
+                      </figure>
+                      <figure className="w-[78%] shrink-0 snap-start overflow-hidden rounded-[18px] border border-ink/10 bg-card sm:w-[58%]">
+                        <img src={kalawelaThaTienGallery02} alt="Physical prototype development for the Kalawela Tha Tien project" width={1800} height={1575} loading="lazy" className="aspect-[8/7] h-full w-full object-cover" />
+                      </figure>
+                    </div>
+                  </section>
+                </div>
               )}
               {active.id === "rocking-life" && (
                 <div className="space-y-10 pt-3">

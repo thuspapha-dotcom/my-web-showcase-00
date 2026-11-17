@@ -598,3 +598,389 @@
     outline-offset: 3px;
   }
 }
+
+/* Restored legacy visual: plum-red editorial canvas with cream paper cards. */
+.legacy-plum-visual {
+  --legacy-plum: #54152f;
+  --legacy-plum-deep: #351020;
+  --legacy-berry: #9d365c;
+  --legacy-cream: #fff3df;
+  --legacy-paper: #fffaf1;
+  --play-coral: #ff6f7d;
+  --play-yellow: #ffd457;
+  --play-aqua: #63d8d2;
+  --play-lilac: #b9a7ff;
+  --play-mint: #99df9b;
+  background: var(--legacy-plum);
+}
+
+.legacy-plum-visual > header {
+  border-color: rgb(255 243 223 / 0.2);
+  background: var(--legacy-plum-deep);
+}
+
+.legacy-plum-visual #top {
+  border-color: var(--legacy-plum-deep);
+  background:
+    radial-gradient(circle at 92% 16%, rgb(255 212 87 / 0.72) 0 5rem, transparent 5.1rem),
+    radial-gradient(circle at 59% 88%, rgb(99 216 210 / 0.28) 0 7rem, transparent 7.1rem),
+    var(--legacy-paper);
+}
+
+.legacy-plum-visual #top > div:first-child {
+  border-color: rgb(157 54 92 / 0.38);
+}
+
+.legacy-plum-visual #work {
+  color: var(--legacy-cream);
+  background-color: var(--legacy-plum);
+  background-image:
+    linear-gradient(rgb(255 243 223 / 0.1) 1px, transparent 1px),
+    linear-gradient(90deg, rgb(255 243 223 / 0.1) 1px, transparent 1px);
+  background-size: 42px 42px;
+}
+
+.legacy-plum-visual #work > div > .border-t {
+  border-color: rgb(255 243 223 / 0.22);
+}
+
+.legacy-plum-visual #work article {
+  background: var(--legacy-paper);
+  color: var(--ink);
+  box-shadow: 7px 8px 0 var(--play-aqua);
+}
+
+.legacy-plum-visual #work article:nth-of-type(5n + 1) {
+  border-color: var(--play-coral);
+}
+
+.legacy-plum-visual #work article:nth-of-type(5n + 2) {
+  border-color: var(--play-yellow);
+}
+
+.legacy-plum-visual #work article:nth-of-type(5n + 3) {
+  border-color: var(--play-aqua);
+}
+
+.legacy-plum-visual #work article:nth-of-type(5n + 4) {
+  border-color: var(--play-lilac);
+}
+
+.legacy-plum-visual #work article:nth-of-type(5n) {
+  border-color: var(--play-mint);
+}
+
+.legacy-plum-visual #work article:hover {
+  box-shadow: 11px 13px 0 var(--play-aqua);
+}
+
+.legacy-plum-visual #work article span.absolute {
+  border-color: var(--legacy-plum-deep);
+  background: var(--play-yellow);
+}
+
+.legacy-plum-visual #work .button-system {
+  border-color: rgb(255 243 223 / 0.55);
+  background: rgb(255 243 223 / 0.08);
+  color: var(--legacy-cream);
+}
+
+.legacy-plum-visual #work .button-system:hover,
+.legacy-plum-visual #work .button-system-selected {
+  border-color: var(--play-yellow);
+  background: var(--play-yellow);
+  color: var(--legacy-plum-deep);
+}
+
+.legacy-plum-visual #about {
+  border-color: var(--legacy-plum-deep);
+  background: var(--legacy-plum-deep);
+  color: var(--legacy-cream);
+}
+
+.legacy-plum-visual #about .text-ink\/70,
+.legacy-plum-visual #about .text-ink\/75,
+.legacy-plum-visual #about .text-ink\/65,
+.legacy-plum-visual #about .text-ink\/60 {
+  color: rgb(255 243 223 / 0.72);
+}
+
+.legacy-plum-visual #about .bg-card {
+  border-color: rgb(255 243 223 / 0.18);
+  background: rgb(255 250 241 / 0.08);
+  color: var(--legacy-cream);
+}
+
+.legacy-plum-visual #about .mt-10.grid > div:nth-child(1) {
+  border-color: var(--play-coral);
+  background: rgb(255 111 125 / 0.16);
+}
+
+.legacy-plum-visual #about .mt-10.grid > div:nth-child(2) {
+  border-color: var(--play-aqua);
+  background: rgb(99 216 210 / 0.14);
+}
+
+.legacy-plum-visual #about .mt-10.grid > div:nth-child(3) {
+  border-color: var(--play-yellow);
+  background: rgb(255 212 87 / 0.14);
+}
+
+.legacy-plum-visual #about .mt-10.grid > div:nth-child(1) > p:first-child {
+  color: var(--play-coral);
+}
+
+.legacy-plum-visual #about .mt-10.grid > div:nth-child(2) > p:first-child {
+  color: var(--play-aqua);
+}
+
+.legacy-plum-visual #about .mt-10.grid > div:nth-child(3) > p:first-child {
+  color: var(--play-yellow);
+}
+
+.legacy-plum-visual #contact {
+  border-color: var(--legacy-plum-deep);
+  background-color: var(--play-coral);
+  background-image:
+    linear-gradient(90deg, rgb(255 212 87 / 0.22) 50%, transparent 50%),
+    linear-gradient(rgb(185 167 255 / 0.2) 50%, transparent 50%);
+}
+
+.legacy-plum-visual #contact > div {
+  border-color: var(--legacy-plum-deep);
+  background: var(--legacy-paper);
+}
+
+.legacy-plum-visual > footer {
+  border-color: rgb(255 243 223 / 0.18);
+  background: var(--legacy-plum-deep);
+  color: var(--legacy-cream);
+}
+
+.legacy-plum-visual > footer p {
+  color: rgb(255 243 223 / 0.7);
+}
+
+.legacy-plum-visual .animate-twinkle {
+  color: var(--play-yellow);
+}
+
+/* Candy editorial visual — inspired by playful confectionery websites. */
+.candy-editorial-visual {
+  --candy-wine: #8f102d;
+  --candy-red: #c75b63;
+  --candy-pink: #f7b8ce;
+  --candy-blush: #ffe2e5;
+  --candy-cream: #fff8ed;
+  --candy-lavender: #b9b6ff;
+  --candy-ink: #72112b;
+  --candy-aqua: #6fd4cf;
+  background: var(--candy-wine);
+  padding-inline: clamp(0px, 4vw, 64px);
+}
+
+.candy-editorial-visual > header,
+.candy-editorial-visual > section,
+.candy-editorial-visual > footer {
+  width: min(100%, 1280px);
+  margin-inline: auto;
+}
+
+.candy-editorial-visual > header {
+  border: 0;
+  background: var(--candy-pink);
+  color: var(--candy-ink);
+}
+
+.candy-editorial-visual > header img {
+  filter: none;
+}
+
+.candy-editorial-visual > header a {
+  color: var(--candy-ink);
+}
+
+.candy-editorial-visual > header .button-system-dark {
+  border-color: var(--candy-ink);
+  background: var(--candy-cream);
+  color: var(--candy-ink);
+}
+
+.candy-editorial-visual #top {
+  position: relative;
+  overflow: hidden;
+  margin-top: 24px;
+  border: 0;
+  background-color: var(--candy-cream);
+  background-image:
+    linear-gradient(rgb(143 16 45 / 0.1) 1px, transparent 1px),
+    linear-gradient(90deg, rgb(143 16 45 / 0.1) 1px, transparent 1px);
+  background-size: 34px 34px;
+}
+
+.candy-editorial-visual #top::before {
+  content: "";
+  position: absolute;
+  inset: 0 0 auto;
+  z-index: 2;
+  height: 22px;
+  background:
+    radial-gradient(circle at 14px 0, transparent 13px, var(--candy-pink) 14px) 0 0 / 28px 22px repeat-x;
+  pointer-events: none;
+}
+
+.candy-editorial-visual #top > div:first-child {
+  border: 0;
+}
+
+.candy-editorial-visual #top .retro-stripes {
+  background-color: transparent;
+  background-image:
+    linear-gradient(90deg, rgb(247 184 206 / 0.38) 50%, transparent 50%),
+    linear-gradient(rgb(247 184 206 / 0.38) 50%, transparent 50%);
+  background-size: 38px 38px;
+}
+
+.candy-editorial-visual #top h1,
+.candy-editorial-visual #top > div:last-child {
+  color: var(--candy-ink);
+}
+
+.candy-editorial-visual #top > div:last-child {
+  border-color: var(--candy-wine);
+  background: var(--candy-pink);
+}
+
+.candy-editorial-visual #work {
+  position: relative;
+  color: var(--candy-cream);
+  background: var(--candy-red);
+  padding-top: 7rem;
+}
+
+.candy-editorial-visual #work::before {
+  content: "";
+  position: absolute;
+  inset: 0 0 auto;
+  height: 34px;
+  background:
+    radial-gradient(circle at 17px 0, var(--candy-cream) 16px, transparent 17px) 0 0 / 34px 34px repeat-x;
+}
+
+.candy-editorial-visual #work article {
+  border: 2px solid var(--candy-wine);
+  background: var(--candy-cream);
+  color: var(--candy-ink);
+  box-shadow: 8px 9px 0 var(--candy-wine);
+}
+
+.candy-editorial-visual #work article:hover {
+  box-shadow: 12px 14px 0 var(--candy-wine);
+}
+
+.candy-editorial-visual #work article span.absolute {
+  border-color: var(--candy-wine);
+  background: var(--candy-pink);
+  color: var(--candy-ink);
+}
+
+.candy-editorial-visual #work .button-system {
+  border-color: var(--candy-cream);
+  background: transparent;
+  color: var(--candy-cream);
+}
+
+.candy-editorial-visual #work .button-system:hover,
+.candy-editorial-visual #work .button-system-selected {
+  border-color: var(--candy-wine);
+  background: var(--candy-pink);
+  color: var(--candy-ink);
+}
+
+.candy-editorial-visual #work > div > .border-t {
+  border-color: rgb(255 248 237 / 0.38);
+}
+
+.candy-editorial-visual #about {
+  position: relative;
+  border: 0;
+  background:
+    linear-gradient(90deg, var(--candy-cream) 0 50%, transparent 50%),
+    repeating-linear-gradient(90deg, var(--candy-pink) 0 12px, var(--candy-blush) 12px 24px);
+  color: var(--candy-ink);
+}
+
+.candy-editorial-visual #about::before {
+  content: "";
+  position: absolute;
+  inset: 0 0 auto;
+  height: 18px;
+  background: repeating-linear-gradient(90deg, var(--candy-wine) 0 16px, var(--candy-pink) 16px 32px);
+}
+
+.candy-editorial-visual #about .text-ink\/70,
+.candy-editorial-visual #about .text-ink\/75,
+.candy-editorial-visual #about .text-ink\/65,
+.candy-editorial-visual #about .text-ink\/60 {
+  color: rgb(114 17 43 / 0.72);
+}
+
+.candy-editorial-visual #about .bg-card {
+  border: 2px solid var(--candy-wine);
+  background: var(--candy-cream);
+  color: var(--candy-ink);
+  box-shadow: 6px 7px 0 var(--candy-pink);
+}
+
+.candy-editorial-visual #about .mt-10.grid > div:nth-child(2) {
+  background: var(--candy-blush);
+}
+
+.candy-editorial-visual #about .mt-10.grid > div:nth-child(3) {
+  background: var(--candy-lavender);
+}
+
+.candy-editorial-visual #contact {
+  border: 0;
+  background: var(--candy-lavender);
+  background-image:
+    linear-gradient(rgb(143 16 45 / 0.09) 1px, transparent 1px),
+    linear-gradient(90deg, rgb(143 16 45 / 0.09) 1px, transparent 1px);
+  background-size: 32px 32px;
+}
+
+.candy-editorial-visual #contact > div {
+  position: relative;
+  border: 2px solid var(--candy-wine);
+  border-radius: 42px;
+  background: var(--candy-cream);
+  box-shadow: 10px 12px 0 var(--candy-wine);
+}
+
+.candy-editorial-visual #contact > div::before {
+  content: "";
+  position: absolute;
+  inset: -18px 20px auto;
+  height: 28px;
+  background: radial-gradient(circle, var(--candy-cream) 13px, transparent 14px) 0 0 / 28px 28px repeat-x;
+}
+
+.candy-editorial-visual > footer {
+  border-color: rgb(255 248 237 / 0.2);
+  background: var(--candy-wine);
+  color: var(--candy-cream);
+}
+
+.candy-editorial-visual > footer p {
+  color: rgb(255 248 237 / 0.78);
+}
+
+@media (max-width: 767px) {
+  .candy-editorial-visual {
+    padding-inline: 0;
+  }
+
+  .candy-editorial-visual #about {
+    background: var(--candy-blush);
+  }
+}
