@@ -942,6 +942,14 @@ export function HomePage() {
                   ))}
                 </div>
               </div>
+              {active.id === "kalawela-tha-tien" && active.team && (
+                <div className="rounded-[18px] border border-ink/10 bg-canvas-alt/60 p-4">
+                  <p className="text-xs font-semibold uppercase tracking-widest text-ink/60">
+                    Team
+                  </p>
+                  <p className="mt-1 text-sm leading-relaxed text-ink/75">{active.team}</p>
+                </div>
+              )}
               {active.id === "self-love" && (
                 <section className="pt-3">
                   <p className="flex items-center gap-2 text-sm font-semibold uppercase tracking-[0.25em] text-pink">
@@ -1460,7 +1468,7 @@ export function HomePage() {
                   </section>
                 </div>
               )}
-              {(active.timeline || active.team) && (
+              {active.id !== "kalawela-tha-tien" && (active.timeline || active.team) && (
                 <div className="grid gap-4 sm:grid-cols-[0.7fr_1.3fr]">
                   {active.timeline && (
                     <div>
